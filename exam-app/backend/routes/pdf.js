@@ -117,6 +117,24 @@ router.post('/save-custom-exam', async (req, res) => {
   }
 });
 
+// DELETE /api/pdfs/custom-exams/:name — delete a custom pasted exam
+router.delete('/custom-exams/:name', async (req, res) => {
+  if (!req.dbConnected) {
+    return res.status(503).json({ error: 'Database offline, cannot delete custom exam' });
+  }
+  try {
+    const name = req.params.name;
+    const result = await Exam.deleteOne({ name, type: 'pasted' });
+    if (result.deletedCount > 0) {
+      res.json({ success: true, message: 'Custom exam deleted successfully!' });
+    } else {
+      res.status(404).json({ error: 'Custom exam not found' });
+    }
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to delete custom exam', details: err.message });
+  }
+});
+
 // GET /api/pdfs/:filename — read and parse PDF
 router.get('/:filename', async (req, res) => {
   const filePath = path.join(PDF_DIR, req.params.filename);

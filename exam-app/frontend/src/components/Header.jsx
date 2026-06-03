@@ -49,6 +49,9 @@ export default function Header({ doneTopics, totalTopics, lastSaved, saving, bac
           <button className={`nav-btn ${view === 'simulator' ? 'active' : ''}`} onClick={() => setView('simulator')}>
             📝 Exam Simulator
           </button>
+          <button className={`nav-btn ${view === 'jexams' ? 'active' : ''}`} onClick={() => setView('jexams')}>
+            ⚡ J-Exams
+          </button>
         </div>
       </div>
       

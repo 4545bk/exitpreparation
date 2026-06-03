@@ -30,7 +30,7 @@ Please reply ONLY with the raw JSON array (wrapped in \`\`\`json ... \`\`\` is f
 Here is the exam text:
 `;
 
-export default function ExamSimulator({ showNotif }) {
+export default function ExamSimulator({ showNotif, initialExam, clearInitialExam }) {
   const [pdfs, setPdfs] = useState([]);
   const [loading, setLoading] = useState(false);
   const [selectedFile, setSelectedFile] = useState('');
@@ -93,6 +93,24 @@ export default function ExamSimulator({ showNotif }) {
   useEffect(() => {
     fetchPdfs();
   }, []);
+
+  // Handle launching from J-Exams view
+  useEffect(() => {
+    if (initialExam) {
+      setQuestions(initialExam.questions);
+      setSelectedFile(initialExam.name);
+      setAnswers({});
+      setCurrentIdx(0);
+      setInExam(true);
+      setExamSubmitted(false);
+      const duration = initialExam.questions.length * 90;
+      setExamDuration(duration);
+      setTimeLeft(duration);
+      
+      clearInitialExam();
+      showNotif(`Loaded exam: ${initialExam.name} ✓`);
+    }
+  }, [initialExam, clearInitialExam, showNotif]);
 
   // Handle PDF Upload via Base64
   const handleUpload = (e) => {
@@ -448,6 +466,18 @@ export default function ExamSimulator({ showNotif }) {
         }
       } catch (dbErr) {
         showNotif('Loaded exam (database offline) ✕');
+      }
+
+      // Mirror to local storage as fallback backup
+      try {
+        const localExamsRaw = localStorage.getItem('react_saved_custom_exams') || '[]';
+        let localExams = JSON.parse(localExamsRaw);
+        localExams = localExams.filter(e => e.filename !== examName && e.name !== examName);
+        localExams.unshift({ filename: examName, name: examName, questions: parsedQuestions });
+        if (localExams.length > 5) localExams.pop();
+        localStorage.setItem('react_saved_custom_exams', JSON.stringify(localExams));
+      } catch (e) {
+        console.error('Failed to mirror to localStorage', e);
       }
 
       setQuestions(parsedQuestions);

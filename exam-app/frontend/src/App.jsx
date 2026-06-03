@@ -5,6 +5,7 @@ import Timer from './components/Timer';
 import DayContent from './components/DayContent';
 import PdfManager from './components/PdfManager';
 import ExamSimulator from './components/ExamSimulator';
+import JExams from './components/JExams';
 import { useProgress } from './hooks/useProgress';
 import { useTimer } from './hooks/useTimer';
 
@@ -14,6 +15,12 @@ export default function App() {
   const [activeDay, setActiveDay] = useState(0);
   const [showPdf, setShowPdf] = useState(false);
   const [view, setView] = useState('study'); // 'study' or 'simulator'
+  const [initialExam, setInitialExam] = useState(null); // { name, questions }
+
+  const handleLaunchExam = (questions, examName) => {
+    setInitialExam({ name: examName, questions });
+    setView('simulator');
+  };
   const [notif, setNotif] = useState({ text: '', show: false });
 
   const showNotif = useCallback((text) => {
@@ -118,9 +125,17 @@ export default function App() {
               />
             </div>
           </>
+        ) : view === 'jexams' ? (
+          <div className="main" id="main-area" style={{ flex: 1 }}>
+            <JExams onLaunchExam={handleLaunchExam} showNotif={showNotif} />
+          </div>
         ) : (
           <div className="main" id="main-area" style={{ flex: 1 }}>
-            <ExamSimulator showNotif={showNotif} />
+            <ExamSimulator 
+              showNotif={showNotif} 
+              initialExam={initialExam} 
+              clearInitialExam={() => setInitialExam(null)} 
+            />
           </div>
         )}
       </div>
