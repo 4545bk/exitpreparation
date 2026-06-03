@@ -34,6 +34,11 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use((req, res, next) => {
+  console.log(`[study_hq] ${req.method} ${req.url} - dbConnected: ${req.dbConnected}`);
+  next();
+});
+
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 

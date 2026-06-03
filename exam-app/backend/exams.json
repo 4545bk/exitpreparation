@@ -1,0 +1,1287 @@
+[
+    {
+        "number": 1,
+        "text": "In a CIDR block of 192.168.100.0/23, what is the broadcast address?",
+        "choices": [
+            "192.168.102.0",
+            "192.168.100.1",
+            "192.168.100.255",
+            "192.168.101.255"
+        ],
+        "correctIndex": 3,
+        "explanation": "A /23 subnet mask has 23 network bits and 9 host bits. The block spans from 192.168.100.0 to 192.168.101.255. The very last address in this range, 192.168.101.255, is reserved as the broadcast address."
+    },
+    {
+        "number": 2,
+        "text": "Which of the following describes the possible alternative ways in which files on a disk can be accessed?",
+        "choices": [
+            "serial or random",
+            "object or serial",
+            "text or binary",
+            "binary or random",
+            "random or binary"
+        ],
+        "correctIndex": 0,
+        "explanation": "Files on a storage disk can fundamentally be accessed either sequentially (serially, one after another from the beginning) or via random access (direct access to any specific location/block on the disk)."
+    },
+    {
+        "number": 3,
+        "text": "In Agile development, what is a sprint?",
+        "choices": [
+            "A testing phase",
+            "A debugging session",
+            "A time-boxed development cycle",
+            "A rapid design process"
+        ],
+        "correctIndex": 2,
+        "explanation": "In Agile framework methodologies like Scrum, a sprint is a fixed, time-boxed iteration (typically 1–4 weeks) during which a specific set of work must be completed and made ready for review."
+    },
+    {
+        "number": 4,
+        "text": "Decision trees classify data points by recursively splitting the data space based on",
+        "choices": [
+            "numerical",
+            "most relevant",
+            "most correlated",
+            "all available"
+        ],
+        "correctIndex": 1,
+        "explanation": "Decision tree algorithms recursively select the most relevant feature at each node (using metrics like Information Gain, Gini Impurity, or Variance reduction) to split the data space optimally."
+    },
+    {
+        "number": 5,
+        "text": "What is meant by software quality in software engineering?",
+        "choices": [
+            "Complexity of code",
+            "High number of features",
+            "Degree to which software meets requirements and is free of defects",
+            "Low cost"
+        ],
+        "correctIndex": 2,
+        "explanation": "Software quality measures how well a software product complies with its specified functional requirements, standard attributes, and user expectations while remaining functional and free of critical bugs or defects."
+    },
+    {
+        "number": 6,
+        "text": "Which class of IP addresses is reserved for experimental use?",
+        "choices": [
+            "Class A",
+            "Class E",
+            "Class C",
+            "Class D"
+        ],
+        "correctIndex": 1,
+        "explanation": "Class E IP addresses (ranging from 240.0.0.0 to 255.255.255.255) are officially reserved by the IETF for experimental, research, or future use. Class D is reserved for multicast."
+    },
+    {
+        "number": 7,
+        "text": "Which of the following search algorithms guarantees both completeness and optimality, assuming the heuristic is admissible and consistent?",
+        "choices": [
+            "Greedy Best-First Search",
+            "A* Search",
+            "Depth-First Search",
+            "Hill Climbing"
+        ],
+        "correctIndex": 1,
+        "explanation": "A* Search evaluates nodes by combining the actual cost to reach them and a heuristic estimate to the goal (f(n) = g(n) + h(n)). If the heuristic is admissible and consistent, A* is mathematically guaranteed to find the shortest/optimal path and is complete."
+    },
+    {
+        "number": 8,
+        "text": "Which protocol uses port 443 and operates at Layer 7?",
+        "choices": [
+            "FTP",
+            "HTTPS",
+            "SSH",
+            "SNMP"
+        ],
+        "correctIndex": 1,
+        "explanation": "HTTPS (Hypertext Transfer Protocol Secure) operates at the Application Layer (Layer 7) of the OSI model and listens on the standard TCP port 443 for encrypted web traffic."
+    },
+    {
+        "number": 9,
+        "text": "Consider the following method, setValue, which adds a value into an array list: public void setValue(int position, String valueIn) { list[position-1] = valueIn; } Assuming that list has been declared as an array of Strings, which one of the following might cause the setValue method to throw an ArrayIndexOutOfBounds exception:",
+        "choices": [
+            "the type of the parameter position being declared as an int",
+            "not declaring the method static",
+            "the return type being declared as void",
+            "the value of the first parameter"
+        ],
+        "correctIndex": 3,
+        "explanation": "The method accesses the array index using position-1. If the first parameter (position) is less than or equal to 0, or greater than the length of the array, it will try to access an invalid index and throw an ArrayIndexOutOfBoundsException."
+    },
+    {
+        "number": 10,
+        "text": "Which Activity lifecycle callback is the first one called after the Activity is launched and is where initial setup like inflating the UI layout typically occurs?",
+        "choices": [
+            "onStart()",
+            "onCreate()",
+            "onResume()",
+            "onAttach()"
+        ],
+        "correctIndex": 1,
+        "explanation": "In Android, onCreate() is the first essential lifecycle callback triggered when the system initially creates the Activity. Developers use it to run basic startup logic, such as calling setContentView() to inflate the layout UI."
+    },
+    {
+        "number": 11,
+        "text": "Which CSS property is used to control the space between the content and the border of an element?",
+        "choices": [
+            "padding",
+            "margin",
+            "spacing",
+            "border-spacing"
+        ],
+        "correctIndex": 0,
+        "explanation": "According to the CSS Box Model, padding establishes the clearing space inside the defined border of an element around its core content, whereas margin clears an area outside the border."
+    },
+    {
+        "number": 12,
+        "text": "Which of the following is known as a set of entities of the same type that share same properties, or attributes?",
+        "choices": [
+            "Entity set",
+            "Relation set",
+            "Tuples",
+            "Entity Relation model"
+        ],
+        "correctIndex": 0,
+        "explanation": "In database design and ER models, an entity set refers to a collection of similar entities (e.g., all employees in a company) that share identical structural characteristics or attributes."
+    },
+    {
+        "number": 13,
+        "text": "In the TCP/IP model, which layer corresponds to the Transport layer of OSI?",
+        "choices": [
+            "Transport",
+            "Application",
+            "Network Access",
+            "Internet"
+        ],
+        "correctIndex": 0,
+        "explanation": "The TCP/IP model explicitly contains a Transport layer (sometimes called Host-to-Host) that mirrors the exact process-to-process communication functionalities of the OSI model's Transport Layer."
+    },
+    {
+        "number": 14,
+        "text": "The values appearing in given attributes of any tuple in the referencing relation must likewise occur in specified attributes of at least one tuple in the referenced relation. What integrity constraint dictates this?",
+        "choices": [
+            "Referencing",
+            "Referential",
+            "Specific",
+            "Primary"
+        ],
+        "correctIndex": 1,
+        "explanation": "This describes a Referential Integrity constraint. It ensures that a foreign key value in a child/referencing table must match a valid primary key value in the parent/referenced table to maintain relational consistency."
+    },
+    {
+        "number": 15,
+        "text": "Which of the following is not a Boolean expression?",
+        "choices": [
+            "10 == 2 * 5",
+            "20 = 5 + 15",
+            "10 ** 2 != 100",
+            "True != True"
+        ],
+        "correctIndex": 1,
+        "explanation": "20 = 5 + 15 is an invalid assignment attempt rather than a comparison expression. A Boolean expression must evaluate to either True or False using comparison operators like == or !=."
+    },
+    {
+        "number": 16,
+        "text": "Which of the following data structures uses the LIFO (Last In First Out) principle?",
+        "choices": [
+            "Binary Tree",
+            "Stack",
+            "Linked List",
+            "Queue"
+        ],
+        "correctIndex": 1,
+        "explanation": "A Stack is a linear data structure that adheres strictly to the Last-In, First-Out (LIFO) protocol, meaning the element added most recently is always the first one to be extracted."
+    },
+    {
+        "number": 17,
+        "text": "What will be the output of the following code? var x = 5; var y = '5'; console.log(x == y);",
+        "choices": [
+            "true",
+            "undefined",
+            "null",
+            "false"
+        ],
+        "correctIndex": 0,
+        "explanation": "In JavaScript, the loose equality operator (==) performs type coercion before comparing values. Since the number 5 can be coerced to match the string '5', the statement evaluates to true."
+    },
+    {
+        "number": 18,
+        "text": "Consider the following method, setValue (same as Q9). Assuming that list has been declared as an array of Strings, which one of the following might cause the setValue method to throw an ArrayIndexOutOfBounds exception:",
+        "choices": [
+            "not declaring the method static",
+            "the type of the parameter position being declared as an int",
+            "the value of the first parameter",
+            "the method having more than one parameter",
+            "the return type being declared as void"
+        ],
+        "correctIndex": 2,
+        "explanation": "As established in Q9, passing an improper value for the first parameter (position) can lead to an indexing calculation (position - 1) that falls outside the boundaries of the allocated array size."
+    },
+    {
+        "number": 19,
+        "text": "What will be printed when the following code is executed? >>> tuple1 = (1, 2, 3, 4) >>> print(tuple1[1:-1])",
+        "choices": [
+            "(2, 3)",
+            "Error: tuple slicing",
+            "(2, 3, 4)",
+            "(1, 2, 3, 4)"
+        ],
+        "correctIndex": 0,
+        "explanation": "Python tuple slicing is zero-indexed and exclusive of the stop index. 1 targets the second element (2), and -1 targets the last element (4) but excludes it, yielding (2, 3)."
+    },
+    {
+        "number": 20,
+        "text": "In COCOMO model, Initial estimate Ei =",
+        "choices": [
+            "a * (KLOC) * b",
+            "b * (KLOC) * a",
+            "a * (KLOC) ** b",
+            "b * (KLOC) ** a"
+        ],
+        "correctIndex": 2,
+        "explanation": "In the Constructive Cost Model (COCOMO), the basic effort estimation formula is formatted exponentially as E = a * (KLOC) ** b, where a and b are constants mapped to the specific development mode."
+    },
+    {
+        "number": 21,
+        "text": "A process goes from running-state to blocked-state whenever a running process:",
+        "choices": [
+            "moved to secondary storage because of memory shortage",
+            "None",
+            "interrupted by a higher priority process",
+            "CPU executes context switching",
+            "needs to get input/output in the middle of execution"
+        ],
+        "correctIndex": 4,
+        "explanation": "A process transitions from running to the blocked/waiting state when it encounters a blocking dependency, such as explicitly requesting input/output services or waiting for an external system resource event."
+    },
+    {
+        "number": 22,
+        "text": "Which of the following is not true about functions in python?",
+        "choices": [
+            "Functions are reusable pieces of program",
+            "Functions provide better modularity for your programs",
+            "Function definitions can alter flow of execution",
+            "Python allows user defined functions"
+        ],
+        "correctIndex": 2,
+        "explanation": "Defining a function simply registers its signature and block space within the system memory; it does not alter the sequential flow of execution until the script explicitly invokes (calls) it."
+    },
+    {
+        "number": 23,
+        "text": "Which Android UI component is described as a 'microactivity' that represents a behavior or portion of the UI and must be hosted within an Activity?",
+        "choices": [
+            "View",
+            "Adapter",
+            "Fragment",
+            "Service"
+        ],
+        "correctIndex": 2,
+        "explanation": "An Android Fragment is a modular portion of an activity, encapsulating its own separate behavior and visual layout lifecycle. It behaves like a sub-activity or 'microactivity' and must be embedded within a host activity."
+    },
+    {
+        "number": 24,
+        "text": "Which method is used to add an element to the end of an array in JavaScript?",
+        "choices": [
+            "pop()",
+            "push()",
+            "shift()",
+            "unshift()"
+        ],
+        "correctIndex": 1,
+        "explanation": "The push() method appends one or more items directly to the end of a JavaScript array and returns the modified array length. unshift() adds items to the beginning."
+    },
+    {
+        "number": 25,
+        "text": "Four conditions are required for a deadlock to occur. Which one of the following is NOT a condition of deadlock?",
+        "choices": [
+            "Circular wait",
+            "Hold and wait",
+            "Mutual exclusion",
+            "No preemption",
+            "Busy wait"
+        ],
+        "correctIndex": 4,
+        "explanation": "Coffman's four required deadlock conditions are Mutual Exclusion, Hold and Wait, No Preemption, and Circular Wait. 'Busy wait' is an alternative process synchronization approach, not a prerequisite for systemic deadlocks."
+    },
+    {
+        "number": 26,
+        "text": "Mutual execution algorithms are primarily used to resolve:",
+        "choices": [
+            "None",
+            "Busy-waiting",
+            "Deadlock",
+            "Starvation",
+            "Race condition"
+        ],
+        "correctIndex": 4,
+        "explanation": "Mutual exclusion (often mistyped as mutual execution here) algorithms prevent multiple processes from concurrently reading/writing to shared resources, neutralizing data corruption from race conditions."
+    },
+    {
+        "number": 27,
+        "text": "HMMs are useful for modeling sequential data where the underlying states are",
+        "choices": [
+            "Pre-defined",
+            "partially observable",
+            "always observable",
+            "completely random"
+        ],
+        "correctIndex": 1,
+        "explanation": "In a Hidden Markov Model (HMM), the true operational state sequence is hidden or only 'partially observable' through an associated set of probabilistic token outputs emitted over time."
+    },
+    {
+        "number": 28,
+        "text": "What will be printed when the following code is executed? >>> tuple1 = (1, 2, 3, 4) >>> print(tuple1 [1:-1]) (same as Q19)",
+        "choices": [
+            "(2, 3)",
+            "Error: tuple slicing",
+            "(2, 3, 4)",
+            "(1, 2, 3, 4)"
+        ],
+        "correctIndex": 0,
+        "explanation": "This is a duplicate of Question 19. Slicing from index 1 to the last element (exclusive) returns (2, 3)."
+    },
+    {
+        "number": 29,
+        "text": "In COCOMO model, Initial estimate Ei = (same as Q20)",
+        "choices": [
+            "a * (KLOC) * b",
+            "b * (KLOC) * a",
+            "a * (KLOC) ** b",
+            "b * (KLOC) ** a"
+        ],
+        "correctIndex": 2,
+        "explanation": "This is a duplicate of Question 20. The basic equation is E = a * (KLOC) ** b, corresponding to choice C."
+    },
+    {
+        "number": 30,
+        "text": "Which of the following is true regarding the flow of execution in a while statement?",
+        "choices": [
+            "If the condition is yielding not true, execute the body",
+            "If the condition is false, exit the while statement and continue execution",
+            "All",
+            "Evaluates the condition yielding only True"
+        ],
+        "correctIndex": 1,
+        "explanation": "A while loop continually checks a boolean test expression. When that expression turns false, the engine terminates loop operations, exits the body block, and proceeds with the remaining codebase sequence."
+    },
+    {
+        "number": 31,
+        "text": "If an algorithm has a time complexity of O(n^2) what happens to the running time if the input size is doubled?",
+        "choices": [
+            "It triples",
+            "It doubles",
+            "It quadruples",
+            "It remains the same"
+        ],
+        "correctIndex": 2,
+        "explanation": "For an algorithm of quadratic complexity O(n^2), doubling the entry inputs means substituting 2n into the formulation: (2n)^2 = 4n^2. Therefore, the execution duration quadruples."
+    },
+    {
+        "number": 32,
+        "text": "Which one of the following scheduling algorithms most likely to cause starvation?",
+        "choices": [
+            "Round-Robin (RR)",
+            "First-Come, First Served (FCFS)",
+            "Short-Job First (SJF)",
+            "None",
+            "Priority-Based With Aging"
+        ],
+        "correctIndex": 2,
+        "explanation": "Shortest Job First (SJF) can lead to starvation for longer processes if short processes continuously enter the ready queue. Priority-Based with aging mitigates starvation, and RR/FCFS ensure eventual execution."
+    },
+    {
+        "number": 33,
+        "text": "Bereket needs to send an email to his supervisor with an attachment that includes sensitive information. He wants to maintain the confidentiality of this information. Which of the following choices is the BEST choice to meet his needs?",
+        "choices": [
+            "Digital signature",
+            "Encryption",
+            "Hashing",
+            "Data masking"
+        ],
+        "correctIndex": 1,
+        "explanation": "Encryption transforms plain text data into unreadable cipher format using cryptographic algorithms, rendering it secure and maintaining strict confidentiality against unauthorized access."
+    },
+    {
+        "number": 34,
+        "text": "The main purpose of STP (Spanning Tree Protocol) is to:",
+        "choices": [
+            "Prioritize traffic",
+            "Monitor SNMP traps",
+            "Prevent Layer 2 loops",
+            "Filter traffic by VLAN"
+        ],
+        "correctIndex": 2,
+        "explanation": "The Spanning Tree Protocol (STP) operates at the Data Link layer (Layer 2) to dynamically identify redundant pathways and disable loop connections in a network topology, preventing broadcast storms."
+    },
+    {
+        "number": 35,
+        "text": "Consider the following setValue method (same as Q9/Q18). Which one might cause an ArrayIndexOutOfBounds exception:",
+        "choices": [
+            "not declaring the method static",
+            "the type of the parameter position being declared as an int",
+            "the value of the first parameter",
+            "the method having more than one parameter",
+            "the return type being declared as void"
+        ],
+        "correctIndex": 2,
+        "explanation": "This is a duplicate of Questions 9 and 18. Passing an improper integer for the first parameter causes the exception."
+    },
+    {
+        "number": 36,
+        "text": "Which command can display the current ARP cache on a Windows system?",
+        "choices": [
+            "ipconfig",
+            "ping",
+            "arp -a",
+            "netstat -r"
+        ],
+        "correctIndex": 2,
+        "explanation": "The arp -a CLI utility displays current Address Resolution Protocol (ARP) caching tables, revealing the active IP-to-MAC address mapping translations."
+    },
+    {
+        "number": 37,
+        "text": "In a graph, what does a cycle represent?",
+        "choices": [
+            "A linear path",
+            "A spanning tree",
+            "A set of disconnected vertices",
+            "A path that starts and ends at the same vertex"
+        ],
+        "correctIndex": 3,
+        "explanation": "A cycle within a graph structure represents a closed path of edges and vertices where the initial starting node is identical to the final destination node, with no other repeating vertices."
+    },
+    {
+        "number": 38,
+        "text": "Which of the following is a divide and conquer algorithm?",
+        "choices": [
+            "Binary Search",
+            "Insertion Sort",
+            "Linear Search",
+            "Bubble Sort"
+        ],
+        "correctIndex": 0,
+        "explanation": "Binary Search operates on a divide-and-conquer paradigm by repeatedly halving the search space of a sorted collection to locate a target element."
+    },
+    {
+        "number": 39,
+        "text": "Which of the following is true regarding the flow of execution in a while statement? (same as Q30)",
+        "choices": [
+            "If the condition is yielding not true, execute the body",
+            "If the condition is false, exit the while statement and continue execution",
+            "All",
+            "Evaluates the condition yielding only True"
+        ],
+        "correctIndex": 1,
+        "explanation": "Duplicate of Question 30. When the conditional check yields a false value, the program exits the loop structure and resumes sequential execution."
+    },
+    {
+        "number": 40,
+        "text": "Which one of the following scheduling algorithms most likely to cause starvation? (same as Q32)",
+        "choices": [
+            "Round-Robin (RR)",
+            "First-Come, First Served (FCFS)",
+            "Short-Job First (SJF)",
+            "None",
+            "Priority-Based With Aging"
+        ],
+        "correctIndex": 2,
+        "explanation": "Duplicate of Question 32. Short-Job First (SJF) is highly susceptible to process starvation because longer processes are continually deferred when short tasks are added."
+    },
+    {
+        "number": 41,
+        "text": "Which one of the following scheduling algorithms most likely to cause starvation? (same as Q32)",
+        "choices": [
+            "Round-Robin (RR)",
+            "First-Come, First Served (FCFS)",
+            "Short-Job First (SJF)",
+            "None",
+            "Priority-Based With Aging"
+        ],
+        "correctIndex": 2,
+        "explanation": "Another duplicate of the starvation question. Short-Job First (SJF) remains the correct choice."
+    },
+    {
+        "number": 42,
+        "text": "Bereket needs to send an email to his supervisor with an attachment that includes sensitive information. (same as Q33)",
+        "choices": [
+            "Digital signature",
+            "Encryption",
+            "Hashing",
+            "Data masking"
+        ],
+        "correctIndex": 1,
+        "explanation": "Duplicate of Question 33. Encryption is the standard mechanism to preserve data confidentiality during transmission over networks."
+    },
+    {
+        "number": 43,
+        "text": "Consider the following setValue method which one might cause an ArrayIndexOutOfBounds exception:",
+        "choices": [
+            "not declaring the method static",
+            "the type of the parameter position being declared as an int",
+            "the value of the first parameter",
+            "the method having more than one parameter",
+            "the return type being declared as void"
+        ],
+        "correctIndex": 2,
+        "explanation": "Duplicate question. The runtime index exception traces directly back to an invalid or out-of-range value passed to the first parameter (position)."
+    },
+    {
+        "number": 44,
+        "text": "Which of the following best describes a compiled language?",
+        "choices": [
+            "Code is always faster in compiled languages because they have no errors",
+            "Code is executed line-by-line",
+            "Code is translated directly into machine code before execution",
+            "Compiled languages cannot be used for low-level programming"
+        ],
+        "correctIndex": 2,
+        "explanation": "Compiled languages utilize a compiler tool to translate human-readable source code directly into target hardware machine code instructions all at once before deployment execution."
+    },
+    {
+        "number": 45,
+        "text": "Which principle refers to minimizing the interdependence between software modules?",
+        "choices": [
+            "Modularity",
+            "Cohesion",
+            "Abstraction",
+            "Coupling"
+        ],
+        "correctIndex": 3,
+        "explanation": "Coupling measures the level of structural interdependence linking discrete software modules. Good architectural practices strive for low coupling (minimizing interdependence) and high cohesion."
+    },
+    {
+        "number": 46,
+        "text": "______ is a set of one or more attributes taken collectively to uniquely identify a record.",
+        "choices": [
+            "Primary Key",
+            "Foreign key",
+            "Super key",
+            "Candidate key"
+        ],
+        "correctIndex": 2,
+        "explanation": "A Super Key represents any set of one or more attributes within a relational table schema that can collectively identify individual database records uniquely."
+    },
+    {
+        "number": 47,
+        "text": "Consider the inheritance hierarchy shown in the diagram below: [Class inheriting diagram with two subclasses]. What does the arrow from subclasses to Class represent?",
+        "choices": [
+            "Inheritance",
+            "Composition",
+            "Aggregation",
+            "Association"
+        ],
+        "correctIndex": 0,
+        "explanation": "In structural UML object modeling diagrams, solid arrows pointing from distinct subclasses back up toward a parent class signify generalization or an 'is-a' Inheritance relationship."
+    },
+    {
+        "number": 48,
+        "text": "You are comparing different types of authentications. Of the following choices, which one uses multifactor authentication?",
+        "choices": [
+            "A system that requires users to enter a username and password",
+            "A system that requires users to have a smart card and a PIN",
+            "A system that checks an employee's fingerprint and does a vein scan",
+            "A cipher door lock that requires employees to enter a code to open the door"
+        ],
+        "correctIndex": 1,
+        "explanation": "Multifactor authentication requires combining distinct authentication categories. A smart card ('something you have') combined with a PIN code ('something you know') satisfies this requirement."
+    },
+    {
+        "number": 49,
+        "text": "Which evaluation metric is most suitable for imbalanced classification problems?",
+        "choices": [
+            "Accuracy",
+            "R-squared",
+            "F1-Score",
+            "Mean Squared Error (MSE)"
+        ],
+        "correctIndex": 2,
+        "explanation": "Standard Accuracy provides misleading figures on skewed distribution classes. The F1-Score takes the harmonic mean of Precision and Recall, making it highly effective for assessing imbalanced data groups."
+    },
+    {
+        "number": 50,
+        "text": "In linear regression, the predicted value is a linear function of the _____.",
+        "choices": [
+            "distance from the hyperplane",
+            "independent variables",
+            "class probabilities",
+            "dependent variable"
+        ],
+        "correctIndex": 1,
+        "explanation": "In linear regression modeling, the target output (dependent variable) is calculated as a linear combination of the incoming predictor features, known as the independent variables."
+    },
+    {
+        "number": 51,
+        "text": "Your organization hired a cybersecurity expert to perform a security assessment. After running a vulnerability scan, she sees: Host IP 192.168.1.10 OS Apache httpd 2.433 Vulnerable to mod_auth exploit. However, she verified that the mod_auth module has not been installed or enabled on the server. Which of the following BEST explains this scenario?",
+        "choices": [
+            "A false positive",
+            "The result of a credentialed scan",
+            "The result of a non-credentialed scan",
+            "A false negative"
+        ],
+        "correctIndex": 0,
+        "explanation": "A false positive occurs when a security scanner reports a vulnerability that does not actually exist or cannot be exploited on the system because the targeted module is not present or enabled."
+    },
+    {
+        "number": 52,
+        "text": "What is the main function of the three-way handshake in TCP?",
+        "choices": [
+            "Flow control",
+            "Authentication",
+            "Reliable data delivery",
+            "Connection setup and synchronization"
+        ],
+        "correctIndex": 3,
+        "explanation": "The main objective of the TCP three-way handshake (SYN, SYN-ACK, ACK) is to establish a reliable end-to-end connection and synchronize initial sequence numbers between hosts before data transfer begins."
+    },
+    {
+        "number": 53,
+        "text": "A class called Network has been declared with private attributes maxNumberOfUsers and currentNumberOfUsers. A class SubNet extends Network. In a program that declares an initializes an object sub of SubNet, which of the following statements would NOT cause a compiler error?",
+        "choices": [
+            "sub.maxNumberOfUsers = 100;",
+            "sub.setMaxNumberOfUsers(100);",
+            "sub.currentNumberOfUsers = 50;",
+            "sub.system.out.println(sub.maxNumberOfUsers);"
+        ],
+        "correctIndex": 1,
+        "explanation": "Because maxNumberOfUsers is private, it cannot be accessed directly by subclasses or external scripts. It must be modified using a public setter method, such as setMaxNumberOfUsers(100)."
+    },
+    {
+        "number": 54,
+        "text": "Which one of the following mechanisms allows execution of multiple processes by switching CPU even if the currently executing process is not completed?",
+        "choices": [
+            "Time-sharing",
+            "Multiprogramming",
+            "Multiprocessing",
+            "None",
+            "Monoprogramming"
+        ],
+        "correctIndex": 0,
+        "explanation": "Time-sharing systems use CPU scheduling and multi-programming to allocate short slices of CPU execution time to multiple concurrent processes, switching rapidly even before a task finishes."
+    },
+    {
+        "number": 55,
+        "text": "_____ involves generating, collecting, disseminating, and storing information.",
+        "choices": [
+            "Concurrent Management",
+            "Critical Management",
+            "Configuration Management",
+            "Communication Management"
+        ],
+        "correctIndex": 3,
+        "explanation": "In project management frameworks, Communication Management encompasses the precise processes required to ensure timely and appropriate generation, collection, distribution, storage, and retrieval of project information."
+    },
+    {
+        "number": 56,
+        "text": "Chala is a security practitioner tasked with ensuring that the information on the organization's public website is not changed by anyone outside the organization. This task is an example of ensuring _____.",
+        "choices": [
+            "Availability",
+            "Integrity",
+            "Confidentiality",
+            "Authentication"
+        ],
+        "correctIndex": 1,
+        "explanation": "Integrity within the CIA security triad ensures that information remains trustworthy, accurate, and protected against unauthorized modification or deletion."
+    },
+    {
+        "number": 57,
+        "text": "Which software process model emphasizes strict sequential flow between phases?",
+        "choices": [
+            "Agile Model",
+            "Incremental Model",
+            "Spiral Model",
+            "Waterfall Model"
+        ],
+        "correctIndex": 3,
+        "explanation": "The Waterfall Model is a traditional, linear software development life cycle approach where progress flows downward through distinct phases (Requirements, Design, Implementation, etc.) in a strict sequential order."
+    },
+    {
+        "number": 58,
+        "text": "What is the output of the following code? >>> my_list = [1,2,3,2,4] >>> my_list.remove(2) >>> my_list",
+        "choices": [
+            "None",
+            "[1,2,2,4]",
+            "[1,3,2,4]",
+            "[1,3,4]"
+        ],
+        "correctIndex": 2,
+        "explanation": "The Python list.remove(x) method searches for the first occurrence of the specified value x and deletes it. Removing 2 from [1, 2, 3, 2, 4] results in [1, 3, 2, 4]."
+    },
+    {
+        "number": 59,
+        "text": "Which of the following best describes the role of a file system in an operating system?",
+        "choices": [
+            "It manages the computer's hardware resources, such as CPU and memory",
+            "It provides a structured way to store, organize, retrieve, and manage files on storage devices",
+            "It optimizes network bandwidth usage for file transfers over the internet",
+            "It handles user authentication and access control for logging into the system",
+            "None"
+        ],
+        "correctIndex": 1,
+        "explanation": "A file system provides an OS with a structured mechanism to organize, store, index, label, name, retrieve, and update file structures safely on physical storage devices."
+    },
+    {
+        "number": 60,
+        "text": "Delphi approach is also called _____ group consensus technique.",
+        "choices": [
+            "Fully Consultative",
+            "Non-Consultative",
+            "Consultative",
+            "Partially Consultative"
+        ],
+        "correctIndex": 2,
+        "explanation": "The Delphi method is a structured, systematic communication technique that gathers expert opinions over multiple rounds of questionnaires to build a collaborative, consultative group consensus."
+    },
+    {
+        "number": 61,
+        "text": "What is the output of the following code? >>> my_list = [1,2,3,4,5,6,7,8,9,10] >>> my_list[5::-2]",
+        "choices": [
+            "[6,4,2]",
+            "[5,7,9]",
+            "[5,4,3,2,1]",
+            "[]"
+        ],
+        "correctIndex": 0,
+        "explanation": "The slice 5::-2 starts at index 5 (value 6). A step of -2 moves backward through the list, selecting every second element: index 5 (6), index 3 (4), and index 1 (2), resulting in [6, 4, 2]."
+    },
+    {
+        "number": 62,
+        "text": "_____ is a hierarchical and incremental decomposition of the project into phases, deliverables and work packages.",
+        "choices": [
+            "Work Integration Structure",
+            "Task Integration Structure",
+            "Bottom-up Integration Structure",
+            "Work Breakdown Structure"
+        ],
+        "correctIndex": 3,
+        "explanation": "A Work Breakdown Structure (WBS) decomposes a project into a visual, hierarchical outline of deliverables and distinct work packages, helping managers organize project scopes effectively."
+    },
+    {
+        "number": 63,
+        "text": "The bias-variance trade-off implies that:",
+        "choices": [
+            "Increasing model complexity reduces both bias and variance",
+            "Underfitting is caused by low variance",
+            "Simple models have high bias and low variance",
+            "Overfitting occurs when bias is too high"
+        ],
+        "correctIndex": 2,
+        "explanation": "Simple models often oversimplify the relationship between variables, leading to high bias. However, their simplicity means they vary less across different datasets, resulting in low variance."
+    },
+    {
+        "number": 64,
+        "text": "What is the primary objective of virtual memory in a computer system?",
+        "choices": [
+            "increase the physical memory capacity",
+            "None",
+            "increase execution speed by catching frequently used data",
+            "allow processes use more memory than physical available",
+            "secure part of memory from being accessed by other processes"
+        ],
+        "correctIndex": 3,
+        "explanation": "Virtual memory simulates additional random-access memory by mapping active processes to secondary storage disk spaces, allowing applications to use more memory than is physically available."
+    },
+    {
+        "number": 65,
+        "text": "What is printed by the following statements? >>> str = 'This is python code' >>> print(str[2] + str[-6])",
+        "choices": [
+            "tn",
+            "io",
+            "in",
+            "to"
+        ],
+        "correctIndex": 2,
+        "explanation": "str[2] targets the third character ('i'). Counting backward from the end, str[-6] targets the sixth character from the right ('n'). Combining them outputs 'in'."
+    },
+    {
+        "number": 66,
+        "text": "Sara is a database manager. Sara is allowed to add new users to the database, remove current users, and create new usage functions for the users. Sara is not allowed to read the data in the fields of the database itself. This is an example of:",
+        "choices": [
+            "Role Based Access Control",
+            "Discretionary Access Control",
+            "Mandatory Access Control",
+            "Behavior Based Access Control"
+        ],
+        "correctIndex": 0,
+        "explanation": "Role-Based Access Control (RBAC) restricts system access permissions based on an employee's organizational role (e.g., Database Manager), separating administrative capabilities from data viewing permissions."
+    },
+    {
+        "number": 67,
+        "text": "Which type of data can be stored in the database?",
+        "choices": [
+            "Text, files containing data",
+            "All of the above",
+            "Image oriented data",
+            "Data in the form of audio or video"
+        ],
+        "correctIndex": 1,
+        "explanation": "Modern database management systems support a wide range of data types, including raw strings, structured numeric text, multimedia blobs, images, and audio/video streams."
+    },
+    {
+        "number": 68,
+        "text": "What is the primary function of an Intent in Android app navigation?",
+        "choices": [
+            "To manage background threads for long-running operations",
+            "To request an action from another app component",
+            "To store application settings persistently",
+            "To define the visual appearance of a screen"
+        ],
+        "correctIndex": 1,
+        "explanation": "An Intent is an abstract description of an operation to be performed. It acts as a messaging object used to request actions from other application components, such as launching new activities."
+    },
+    {
+        "number": 69,
+        "text": "What is the primary purpose of WAI-ARIA?",
+        "choices": [
+            "To improve website SEO rankings",
+            "To make web applications more accessible",
+            "To increase website loading speed",
+            "To replace HTML with a new accessibility standard"
+        ],
+        "correctIndex": 1,
+        "explanation": "WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications) provides framework specifications to make web content and applications highly accessible to people with diverse disabilities."
+    },
+    {
+        "number": 70,
+        "text": "A program is required to add two integer numbers together. The GUI for this program shows two text fields and a Calculate button. What is the component labeled with an arrow in the diagram?",
+        "choices": [
+            "JFrame",
+            "JTextField",
+            "JLabel",
+            "JButton"
+        ],
+        "correctIndex": 3,
+        "explanation": "In Java swing GUI toolkits, interactive clickable options designed to trigger a specific programmatic action (like a 'Calculate' command) are defined using the JButton class."
+    },
+    {
+        "number": 71,
+        "text": "What is meant by software quality in software engineering? (same as Q5)",
+        "choices": [
+            "Complexity of code",
+            "High number of features",
+            "Degree to which software meets requirements and is free of defects",
+            "Low cost"
+        ],
+        "correctIndex": 2,
+        "explanation": "This is a duplicate of Question 5. Software quality measures how accurately a system satisfies its specified functional goals and engineering standards."
+    },
+    {
+        "number": 72,
+        "text": "The specific set of sequential tasks upon which the project completion date depends or the longest full path is called _____.",
+        "choices": [
+            "Full path",
+            "Project Path",
+            "Critical Path",
+            "Complete Path"
+        ],
+        "correctIndex": 2,
+        "explanation": "In project tracking, the Critical Path method tracks the longest sequence of dependent tasks required to complete a project on schedule. Any delay in these tasks directly extends the project timeline."
+    },
+    {
+        "number": 73,
+        "text": "Which of the following sorting algorithms has the best average-case time complexity?",
+        "choices": [
+            "Quick Sort",
+            "Bubble Sort",
+            "Insertion Sort",
+            "Selection Sort"
+        ],
+        "correctIndex": 0,
+        "explanation": "Quick Sort has an average-case time complexity of O(n log n). The other options (Bubble, Insertion, and Selection Sort) exhibit less efficient quadratic time complexities (O(n^2)) on average."
+    },
+    {
+        "number": 74,
+        "text": "What is the worst-case time complexity of Merge Sort?",
+        "choices": [
+            "O(n²)",
+            "O(log n)",
+            "O(n log n)",
+            "O(n)"
+        ],
+        "correctIndex": 2,
+        "explanation": "Merge Sort uses a divide-and-conquer strategy that consistently divides the array in half and takes linear time to merge the subarrays, guaranteeing an O(n log n) time complexity across best, average, and worst cases."
+    },
+    {
+        "number": 75,
+        "text": "How do you check if an element exists in a set? Using",
+        "choices": [
+            "in keyword",
+            "exists()",
+            "contains()",
+            "check()"
+        ],
+        "correctIndex": 0,
+        "explanation": "In Python, the membership operator in is used to check if an element exists within an iterable collection, such as a set or a list (e.g., if element in my_set:)."
+    },
+    {
+        "number": 76,
+        "text": "Which of the following is an example of a 'Something you know' authentication factor?",
+        "choices": [
+            "GPS",
+            "Finger Printing",
+            "Password",
+            "ATM Card"
+        ],
+        "correctIndex": 2,
+        "explanation": "A password or PIN is a classic example of a knowledge-based authentication factor ('something you know'). Fingerprints are 'something you are,' and an ATM card is 'something you have.'"
+    },
+    {
+        "number": 77,
+        "text": "What is the output of this expression: >>> (2 + 5) ** 2 // 10 + 2 * 3",
+        "choices": [
+            "12.0",
+            "10",
+            "12",
+            "8"
+        ],
+        "correctIndex": 1,
+        "explanation": "Following operator precedence: (2 + 5) ** 2 is 7^2 = 49. Next, floor division 49 // 10 equals 4. Then, multiplication 2 * 3 equals 6. Finally, addition 4 + 6 yields 10."
+    },
+    {
+        "number": 78,
+        "text": "A technique to prevent modification anomalies by creating a different class of relations in RDBMS are called?",
+        "choices": [
+            "Functional Dependencies",
+            "Normal Forms",
+            "Referential integrity",
+            "Data integrity"
+        ],
+        "correctIndex": 1,
+        "explanation": "Normalization is the process of structuring relational database schemas into specific Normal Forms (1NF, 2NF, 3NF) to eliminate data redundancy and prevent insert, update, and delete anomalies."
+    },
+    {
+        "number": 79,
+        "text": "Which operation is used to extract specified columns from a table?",
+        "choices": [
+            "Substitute",
+            "Extract",
+            "Project",
+            "Join"
+        ],
+        "correctIndex": 2,
+        "explanation": "In relational algebra, the Projection operation filters a table vertically, selecting and extracting only the specified columns/attributes while discarding the rest."
+    },
+    {
+        "number": 80,
+        "text": "A team is designing a weather app that must work offline in remote areas but also sync data when internet connectivity is available. Which architectural approach addresses this need?",
+        "choices": [
+            "Only online-based architecture",
+            "Peer-to-peer architecture",
+            "Client-side caching with periodic synchronization",
+            "Pure serverless architecture (no offline support)"
+        ],
+        "correctIndex": 2,
+        "explanation": "Client-side caching allows the application to store and access data locally while offline. When an internet connection is established, periodic synchronization updates the server with local changes."
+    },
+    {
+        "number": 81,
+        "text": "Which of the following is the primary goal of software engineering?",
+        "choices": [
+            "To produce reliable, efficient, and maintainable software",
+            "To develop low-level machine code",
+            "To increase hardware performance",
+            "To create visually appealing user interfaces"
+        ],
+        "correctIndex": 0,
+        "explanation": "The core discipline of software engineering focuses on applying systematic, measurable approaches to develop software products that are reliable, efficient, cost-effective, and easy to maintain."
+    },
+    {
+        "number": 82,
+        "text": "Which of the following is a divide and conquer algorithm? (same as Q38)",
+        "choices": [
+            "Binary Search",
+            "Insertion Sort",
+            "Linear Search",
+            "Bubble Sort"
+        ],
+        "correctIndex": 0,
+        "explanation": "This is a duplicate of Question 38. Binary Search systematically halves the search space of a sorted collection, utilizing a divide-and-conquer paradigm."
+    },
+    {
+        "number": 83,
+        "text": "In the context of search problems, what does a heuristic function do?",
+        "choices": [
+            "Estimates the cost from a node to the goal",
+            "Calculates the actual cost of a path",
+            "Calculates the cost from start to goal",
+            "Finds the goal state directly"
+        ],
+        "correctIndex": 0,
+        "explanation": "In informed search algorithms, a heuristic function h(n) estimates the remaining cost or distance from the current node n to the closest targeted goal state."
+    },
+    {
+        "number": 84,
+        "text": "How do you create a CSS rule that applies only to screen devices with a maximum width of 600px?",
+        "choices": [
+            "@media screen and (min-width: 600px) { ... }",
+            "@media print screen and (max-width: 600px) { ... }",
+            "@media screen and (max-width: 600px) { ... }",
+            "@media all and (max-width: 600px) { ... }"
+        ],
+        "correctIndex": 2,
+        "explanation": "The media query @media screen and (max-width: 600px) targets digital display screens and applies its enclosed style rules only if the viewport width is 600 pixels or less."
+    },
+    {
+        "number": 85,
+        "text": "What is the main advantage of using kernel methods in machine learning?",
+        "choices": [
+            "They are faster than other machine learning algorithms for all tasks",
+            "They can only be used with Support Vector Machines (SVMs)",
+            "They require less data for training compared to other methods",
+            "They allow linear algorithms to work effectively with non-linear data"
+        ],
+        "correctIndex": 3,
+        "explanation": "Kernel methods use the 'kernel trick' to map low-dimensional, non-linear data into a higher-dimensional feature space where it becomes linearly separable, allowing linear classifiers to model complex, non-linear relationships."
+    },
+    {
+        "number": 86,
+        "text": "Which CSS property is used to control the stacking order of positioned elements?",
+        "choices": [
+            "display",
+            "position",
+            "float",
+            "z-index"
+        ],
+        "correctIndex": 3,
+        "explanation": "The CSS z-index property specifies the stack order of an element along the virtual z-axis. Elements with higher z-index values sit on top of elements with lower values."
+    },
+    {
+        "number": 87,
+        "text": "How can web developers accommodate users with mobility impairments?",
+        "choices": [
+            "Ensuring all controls are accessible via keyboard",
+            "Making users rely on a mouse for navigation",
+            "Limiting access to only touch-screen devices",
+            "Removing all interactive elements"
+        ],
+        "correctIndex": 0,
+        "explanation": "Users with mobility impairments may struggle to operate standard precision hardware like mice. Ensuring full keyboard accessibility allows them to navigate web applications effectively using assistive technologies."
+    },
+    {
+        "number": 88,
+        "text": "Consider class ClassA (with testMethod printing 'Hello') and class ClassB extends ClassA (with testMethod printing 'Goodbye'). If a ClassB object calls testMethod(), what is printed?",
+        "choices": [
+            "Hello",
+            "Goodbye",
+            "Hello then Goodbye",
+            "Goodbye then Hello"
+        ],
+        "correctIndex": 1,
+        "explanation": "ClassB overrides testMethod() from its parent class ClassA. When an instance of ClassB invokes testMethod(), the overridden implementation executes, printing only 'Goodbye'."
+    },
+    {
+        "number": 89,
+        "text": "Your organization hired a cybersecurity expert. After a vulnerability scan: Host IP 192.168.1.10 OS Apache httpd 2.433 Vulnerable to mod_auth exploit. She verified that mod_auth has NOT been installed. Which BEST explains this scenario?",
+        "choices": [
+            "The result of a credentialed scan",
+            "A false negative",
+            "The result of a non-credentialed scan",
+            "A false positive"
+        ],
+        "correctIndex": 3,
+        "explanation": "This is a duplicate of Question 51. The scanner flags a vulnerability based on the general software version, but because the specific module is not installed, the finding is a false positive."
+    },
+    {
+        "number": 90,
+        "text": "What is printed by the following statements? >>> Str1 = 'PYTHON programming' >>> print(Str1[2] * Str1.index('O'))",
+        "choices": [
+            "OOOO",
+            "THON",
+            "TTTT",
+            "YYYY"
+        ],
+        "correctIndex": 2,
+        "explanation": "Str1[2] extracts the third character, 'T'. Str1.index('O') returns the index of the character 'O', which is 4. Multiplying a string by an integer repeats it, so 'T' * 4 outputs 'TTTT'."
+    },
+    {
+        "number": 91,
+        "text": "What is the output of the following code? >>> my_list = [1,2,3,4,5,6,7,8,9,10] >>> my_list[5::-2] (same as Q61)",
+        "choices": [
+            "[6,4,2]",
+            "[5,7,9]",
+            "[5,4,3,2,1]",
+            "[]"
+        ],
+        "correctIndex": 0,
+        "explanation": "Duplicate of Question 61. Slicing backward from index 5 with a step of -2 yields [6, 4, 2]."
+    },
+    {
+        "number": 92,
+        "text": "Which statement about ensemble methods (e.g., Random Forests) is TRUE?",
+        "choices": [
+            "They require all base models to be identical",
+            "They perform poorly compared to single models",
+            "They combine weak learners to reduce bias only",
+            "They average predictions to decrease variance"
+        ],
+        "correctIndex": 3,
+        "explanation": "Ensemble methods like Random Forests use bagging to combine multiple independent decision trees. Averaging the predictions of these individual models reduces the overall variance without increasing bias."
+    },
+    {
+        "number": 93,
+        "text": "What is the primary purpose of the RecyclerView widget?",
+        "choices": [
+            "To display a single image on the screen",
+            "To display lists of data by efficiently reusing item views",
+            "To provide a simple button with click functionality",
+            "To manage background tasks efficiently"
+        ],
+        "correctIndex": 1,
+        "explanation": "The Android RecyclerView widget is designed to display large datasets efficiently. It minimizes memory consumption by recycling and reusing item views that have scrolled off the screen."
+    },
+    {
+        "number": 94,
+        "text": "When you want to navigate to a specific Activity within your application, which type of Intent is typically used?",
+        "choices": [
+            "Explicit intent",
+            "Implicit intent",
+            "Pending intent",
+            "Broadcast intent"
+        ],
+        "correctIndex": 0,
+        "explanation": "An Explicit Intent specifies the exact target component class name to be invoked. This is used for internal application navigation when the developer knows the exact destination activity."
+    },
+    {
+        "number": 95,
+        "text": "What is the purpose of the box-sizing property in CSS?",
+        "choices": [
+            "To include padding and border in the element's total size",
+            "To set the total margin of the box",
+            "To define the size of the total content and margin box",
+            "To apply a shadow and margin to the box"
+        ],
+        "correctIndex": 0,
+        "explanation": "Setting box-sizing: border-box; alters the default CSS box model, telling the browser to include the element's padding and border within its total specified width and height."
+    },
+    {
+        "number": 96,
+        "text": "Your organization's backup policy for a file server dictates that the amount of time needed to restore backups should be minimized. Which of the following backup plans would BEST meet this need?",
+        "choices": [
+            "Full backups on Sunday and incremental backups on the other six days of the week",
+            "Full backups on Sunday and differential backups on the other six days of the week",
+            "Differential backups on Sunday and incremental backups on the other six days of the week",
+            "Incremental backups on Sunday and differential backups on the other six days of the week"
+        ],
+        "correctIndex": 1,
+        "explanation": "To restore an incremental plan, you need the initial full backup plus every subsequent daily incremental file. A differential plan only requires the initial full backup and the latest differential file, minimizing recovery time."
+    },
+    {
+        "number": 97,
+        "text": "In a neural network, the activation function introduces:",
+        "choices": [
+            "Regularization to prevent overfitting",
+            "Non-linearity to model complex patterns",
+            "Dimensionality reduction",
+            "Linear decision boundaries"
+        ],
+        "correctIndex": 1,
+        "explanation": "Without an activation function, a neural network behaves like a single linear regression model, regardless of how many layers it has. Activation functions introduce non-linearity, enabling the network to learn complex patterns."
+    },
+    {
+        "number": 98,
+        "text": "A _____ is the lowest level of work on the project.",
+        "choices": [
+            "Task Set",
+            "Task",
+            "Milestone",
+            "Work product"
+        ],
+        "correctIndex": 1,
+        "explanation": "In task delegation structures and Work Breakdown Structures, a 'Task' represents the lowest individual level of granular work or action item tracking allocated to a team member."
+    },
+    {
+        "number": 99,
+        "text": "Return of Investment (ROI) ROI =",
+        "choices": [
+            "(Gain - Cost) / Gain",
+            "(Cost - Gain) / Gain",
+            "(Gain - Cost) / Cost",
+            "(Cost - Gain) / Cost"
+        ],
+        "correctIndex": 2,
+        "explanation": "The standard metric formula to compute Return on Investment (ROI) divides the net project profit (Total Gain minus Total Cost) by the initial Total Cost invested: ROI = (Gain - Cost) / Cost."
+    },
+    {
+        "number": 100,
+        "text": "A startup is building an e-commerce platform expecting rapid growth. They need an architecture that allows independent scaling of the product catalog, payment processing, and recommendation engine. Which architectural style is most suitable?",
+        "choices": [
+            "Single-tier architecture (all logic on the client side)",
+            "Monolithic architecture (all components in one codebase)",
+            "Shared-database architecture (all services use one database)",
+            "Microservices architecture (independent, loosely coupled services)"
+        ],
+        "correctIndex": 3,
+        "explanation": "Microservices architecture breaks an application down into independent, loosely coupled services. This allows distinct functional domains (e.g., payment processing or catalogs) to be deployed and scaled independently."
+    },
+    {
+        "number": 101,
+        "text": "Slack =",
+        "choices": [
+            "LS - EF",
+            "ES - LF",
+            "ES - LS",
+            "LF - EF"
+        ],
+        "correctIndex": 3,
+        "explanation": "Total Slack (or Float) measures how long a task can be delayed without altering the project deadline. It is calculated as Late Finish minus Early Finish (LF - EF) or Late Start minus Early Start (LS - ES)."
+    },
+    {
+        "number": 102,
+        "text": "Which of the following is the correct syntax to create a function in JavaScript?",
+        "choices": [
+            "function: myFunction() {}",
+            "function = myFunction() {}",
+            "function => myFunction() {}",
+            "function myFunction() {}"
+        ],
+        "correctIndex": 3,
+        "explanation": "The standard declaration syntax for defining a named function in JavaScript requires the function keyword followed by the function name, parentheses for arguments, and curly braces for the code block."
+    },
+    {
+        "number": 103,
+        "text": "Which of the following function declarations is correct to define a function that accepts a variable number of arguments?",
+        "choices": [
+            "def func(*args):",
+            "Not possible in python",
+            "def func(args*):",
+            "def func(**args):"
+        ],
+        "correctIndex": 0,
+        "explanation": "In Python, using single asterisk notation (*args) in a function signature allows the function to accept a variable number of positional arguments, packing them into a single tuple."
+    },
+    {
+        "number": 104,
+        "text": "Which of the following is a key challenge in reinforcement learning?",
+        "choices": [
+            "Requirement of perfectly balanced datasets",
+            "The trade-off between exploration and exploitation",
+            "Lack of labeled training data",
+            "High computational cost of matrix operations"
+        ],
+        "correctIndex": 1,
+        "explanation": "A core challenge in reinforcement learning is balancing exploration (trying new actions to discover potential rewards) and exploitation (leveraging known actions that yield verified high rewards)."
+    },
+    {
+        "number": 105,
+        "text": "Which algorithm is most appropriate when the cost of actions varies and finding the least-cost solution is important?",
+        "choices": [
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Greedy Best-First Search",
+            "Uniform Cost Search"
+        ],
+        "correctIndex": 3,
+        "explanation": "Uniform Cost Search expands nodes based on the lowest path cost from the root (g(n)). This guarantees finding the lowest-cost path when step costs vary, unlike BFS or DFS."
+    },
+    {
+        "number": 106,
+        "text": "How can you apply a CSS Grid layout to a container?",
+        "choices": [
+            "display: block;",
+            "display: grid;",
+            "display: inline-grid;",
+            "display: flex;"
+        ],
+        "correctIndex": 1,
+        "explanation": "Setting the CSS property display: grid; converts the targeted container element into a block-level grid container, enabling the use of CSS Grid layout features."
+    }
+]
