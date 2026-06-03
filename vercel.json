@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "exam-app/backend/server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "exam-app/frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "exam_study_app.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "lessons_data.js",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "exam-app/backend/server.js"
+    },
+    {
+      "src": "/standalone",
+      "dest": "/exam_study_app.html"
+    },
+    {
+      "src": "/lessons_data.js",
+      "dest": "/lessons_data.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "exam-app/frontend/$1"
+    }
+  ]
+}

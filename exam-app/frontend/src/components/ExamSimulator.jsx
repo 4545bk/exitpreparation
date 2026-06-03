@@ -55,7 +55,7 @@ export default function ExamSimulator({ showNotif }) {
   // Fetch PDFs from backend
   const fetchPdfs = async () => {
     try {
-      const res = await fetch('http://localhost:3001/api/pdfs');
+      const res = await fetch('/api/pdfs');
       let pdfList = [];
       if (res.ok) {
         pdfList = await res.json();
@@ -63,7 +63,7 @@ export default function ExamSimulator({ showNotif }) {
 
       let customList = [];
       try {
-        const customRes = await fetch('http://localhost:3001/api/pdfs/custom-exams');
+        const customRes = await fetch('/api/pdfs/custom-exams');
         if (customRes.ok) {
           customList = await customRes.json();
         }
@@ -105,7 +105,7 @@ export default function ExamSimulator({ showNotif }) {
     reader.onload = async () => {
       try {
         const base64 = reader.result.split(',')[1];
-        const res = await fetch('http://localhost:3001/api/pdfs/upload', {
+        const res = await fetch('/api/pdfs/upload', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ filename: file.name, base64 })
@@ -149,7 +149,7 @@ export default function ExamSimulator({ showNotif }) {
 
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:3001/api/pdfs/parse-exam/${selectedFile}`);
+      const res = await fetch(`/api/pdfs/parse-exam/${selectedFile}`);
       if (res.ok) {
         const data = await res.json();
         if (data.questions && data.questions.length > 0) {
@@ -434,7 +434,7 @@ export default function ExamSimulator({ showNotif }) {
       }
 
       try {
-        const res = await fetch('http://localhost:3001/api/pdfs/save-custom-exam', {
+        const res = await fetch('/api/pdfs/save-custom-exam', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ name: examName, questions: parsedQuestions })
