@@ -1,0 +1,398 @@
+export const DEFAULT_DAYS = [
+  {
+    id: 0, label: 'Jun 3 — Tonight', status: 'today', title: 'DSA + Programming Fundamentals',
+    sessions: [
+      {
+        name: 'Session 1 · DSA — Analysis & Structures', topics: [
+          { id: 'd0s0t0', text: '★ EXAM: Big-O O(1) constant — array[i] access, hash lookup. Input size irrelevant', done: false, conf: 0 },
+          { id: 'd0s0t1', text: '★ EXAM: Big-O O(log n) — binary search halves problem each step. 1M items = 20 steps', done: false, conf: 0 },
+          { id: 'd0s0t2', text: '★ EXAM: Big-O O(n) — linear scan, must check every element once', done: false, conf: 0 },
+          { id: 'd0s0t3', text: '★ EXAM: Big-O O(n log n) — merge sort, quick sort avg. Best possible comparison sort', done: false, conf: 0 },
+          { id: 'd0s0t4', text: '★ EXAM: Big-O O(n²) — nested loops. Bubble/selection/insertion sort worst case', done: false, conf: 0 },
+          { id: 'd0s0t5', text: '★ EXAM: Big-O rules — drop constants O(3n)=O(n), drop lower terms O(n²+n)=O(n²)', done: false, conf: 0 },
+          { id: 'd0s0t6', text: '⚠️ TRAP: Big-O is WORST case, not average. Big-Theta Θ is tight bound both ways', done: false, conf: 0 },
+          { id: 'd0s0t7', text: 'Space complexity: extra memory used. Merge sort O(n), quick sort O(log n) stack', done: false, conf: 0 },
+          { id: 'd0s0t8', text: 'vs: Array vs Linked List — Array: contiguous, O(1) access; List: O(n) access, O(1) insert at head', done: false, conf: 0 },
+          { id: 'd0s0t9', text: '★ EXAM: Stack LIFO — push/pop O(1). Used for function calls, undo, expression eval', done: false, conf: 0 },
+          { id: 'd0s0t10', text: '★ EXAM: Queue FIFO — enqueue/dequeue O(1). Circular queue: (rear+1)%size wraps around', done: false, conf: 0 },
+          { id: 'd0s0t11', text: '⚠️ TRAP: Simple array queue dequeue is O(n) — must shift. Use circular array or linked list', done: false, conf: 0 },
+          { id: 'd0s0t12', text: '★ EXAM: BST — left < root < right. Search O(log n) avg. O(n) worst if skewed (like linked list)', done: false, conf: 0 },
+          { id: 'd0s0t13', text: 'vs: BST vs AVL — AVL self-balances with rotations. Height diff ≤ 1. Search always O(log n)', done: false, conf: 0 },
+          { id: 'd0s0t14', text: '★ EXAM: Heap — max-heap: parent ≥ children. Insert/extract O(log n). Build heap O(n)', done: false, conf: 0 },
+          { id: 'd0s0t15', text: '★ EXAM: Hash table — O(1) avg lookup. Collision via chaining (linked list) or open addressing', done: false, conf: 0 },
+          { id: 'd0s0t16', text: 'vs: Chaining vs Open Addressing — chaining uses external lists; open probes within table', done: false, conf: 0 },
+          { id: 'd0s0t17', text: '★ EXAM: In-order BST traversal = sorted output. Pre-order = root first. Post-order = root last', done: false, conf: 0 },
+          { id: 'd0s0t18', text: 'vs: Adjacency Matrix O(V²) space O(1) edge check vs List O(V+E) space O(V) edge check', done: false, conf: 0 },
+          { id: 'd0s0t19', text: 'vs: BFS (queue, shortest path, O(V+E)) vs DFS (stack/recursion, less memory, O(V+E))', done: false, conf: 0 }
+        ]
+      },
+      {
+        name: 'Session 2 · DSA — Sorting Algorithms', topics: [
+          { id: 'd0s1t0', text: '★ EXAM: Bubble Sort — compare adjacent, swap. Best O(n) sorted, Avg/Worst O(n²). Stable', done: false, conf: 0 },
+          { id: 'd0s1t1', text: '★ EXAM: Selection Sort — find min, place it. Best/Avg/Worst all O(n²). NOT stable', done: false, conf: 0 },
+          { id: 'd0s1t2', text: '★ EXAM: Insertion Sort — insert into sorted portion. Best O(n), Avg/Worst O(n²). Stable', done: false, conf: 0 },
+          { id: 'd0s1t3', text: '★ EXAM: Merge Sort — divide & conquer. ALL cases O(n log n). Space O(n). Stable', done: false, conf: 0 },
+          { id: 'd0s1t4', text: '★ EXAM: Quick Sort — partition around pivot. Best/Avg O(n log n), Worst O(n²). NOT stable', done: false, conf: 0 },
+          { id: 'd0s1t5', text: '⚠️ TRAP: Quick Sort worst O(n²) when pivot is always min/max (sorted input + first pivot)', done: false, conf: 0 },
+          { id: 'd0s1t6', text: '⚠️ TRAP: Merge Sort is stable. Quick Sort is NOT. Stability = equal elements keep order', done: false, conf: 0 },
+          { id: 'd0s1t7', text: '★ EXAM: Binary Search — sorted array, halves each step. O(log n). Returns mid when found', done: false, conf: 0 },
+          { id: 'd0s1t8', text: 'Heap Sort — build max-heap then extract-max n times. O(n log n) always. Not stable. In-place', done: false, conf: 0 },
+          { id: 'd0s1t9', text: 'Counting Sort — non-comparison. O(n+k) where k=range. Stable. Only for integers', done: false, conf: 0 },
+          { id: 'd0s1t10', text: '⚠️ TRAP: Comparison sorts cannot beat O(n log n). Counting/Radix sorts can be O(n) but limited', done: false, conf: 0 },
+          { id: 'd0s1t11', text: 'Linked list operations: insert head O(1), insert tail O(n) unless tail pointer, delete O(n) search', done: false, conf: 0 },
+          { id: 'd0s1t12', text: 'vs: Singly vs Doubly linked list — doubly has prev pointer, O(1) delete if node known', done: false, conf: 0 },
+          { id: 'd0s1t13', text: 'Circular linked list — last node points to first. Used in round-robin scheduling', done: false, conf: 0 },
+          { id: 'd0s1t14', text: '★ EXAM: Priority Queue — each element has priority. Implemented via heap. O(log n) insert/remove', done: false, conf: 0 }
+        ]
+      },
+      {
+        name: 'Session 3 · Programming Fundamentals', topics: [
+          { id: 'd0s2t0', text: '★ EXAM: Data types — int (4B), float (4B, ~7 digits), double (8B, ~15 digits), char (1B), bool', done: false, conf: 0 },
+          { id: 'd0s2t1', text: '⚠️ TRAP: Float 0.1+0.2 ≠ 0.3 due to binary representation. Use epsilon for comparison', done: false, conf: 0 },
+          { id: 'd0s2t2', text: '★ EXAM: Switch-case must use int/char/enum. Requires "break" or falls through to next case', done: false, conf: 0 },
+          { id: 'd0s2t3', text: 'vs: While vs Do-While — while checks first (0 runs possible); do-while runs body then checks', done: false, conf: 0 },
+          { id: 'd0s2t4', text: '★ EXAM: File I/O modes — r(read), w(overwrite), a(append), rb(read binary), wb(write binary)', done: false, conf: 0 },
+          { id: 'd0s2t5', text: '⚠️ TRAP: Mode "w" instantly deletes existing file content. Use "a" to preserve and append', done: false, conf: 0 },
+          { id: 'd0s2t6', text: 'vs: Recursion vs Iteration — recursion uses O(n) stack space; iteration uses O(1) space', done: false, conf: 0 },
+          { id: 'd0s2t7', text: '⚠️ TRAP: Missing base case in recursion → infinite calls → stack overflow error', done: false, conf: 0 },
+          { id: 'd0s2t8', text: 'vs: Array (fixed size, contiguous) vs Vector (dynamic, doubles when full, O(n) resize copy)', done: false, conf: 0 },
+          { id: 'd0s2t9', text: '★ EXAM: Scope — local vars in stack frame (die with function); global/static persist in data segment', done: false, conf: 0 },
+          { id: 'd0s2t10', text: '★ EXAM: Pass-by-value copies data; pass-by-reference passes address — changes affect original', done: false, conf: 0 },
+          { id: 'd0s2t11', text: '★ EXAM: Debugging — breakpoints pause execution; stepping runs one line at a time', done: false, conf: 0 },
+          { id: 'd0s2t12', text: '★ EXAM: High cohesion (module does one thing well) + low coupling (modules independent)', done: false, conf: 0 },
+          { id: 'd0s2t13', text: '★ EXAM: DRY principle — Don\'t Repeat Yourself. Extract common code into reusable functions', done: false, conf: 0 },
+          { id: 'd0s2t14', text: '★ EXAM: Dry run — trace code line-by-line with variable trace table to find logic errors', done: false, conf: 0 },
+          { id: 'd0s2t15', text: 'Common algorithms — GCD (Euclidean), factorial n!, Fibonacci sequence, palindrome check', done: false, conf: 0 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 1, label: 'Jun 4', status: 'future', title: 'OOP + Web Programming',
+    sessions: [
+      {
+        name: 'Session 1 · OOP — 4 Pillars', topics: [
+          { id: 'd1s0t0', text: '★ EXAM: Encapsulation — private fields + public getters/setters. Prevents invalid state', done: false, conf: 0 },
+          { id: 'd1s0t1', text: '★ EXAM: Inheritance — child "extends" parent, reuses code. Java=single, C++=multiple', done: false, conf: 0 },
+          { id: 'd1s0t2', text: '★ EXAM: Polymorphism — overloading (compile-time, diff params) vs overriding (runtime, child replaces)', done: false, conf: 0 },
+          { id: 'd1s0t3', text: '⚠️ TRAP: Overriding is RUNTIME dispatch. Overloading is COMPILE-TIME resolution. Don\'t confuse', done: false, conf: 0 },
+          { id: 'd1s0t4', text: '★ EXAM: Abstraction — hide implementation, show interface. Abstract class cannot be instantiated', done: false, conf: 0 },
+          { id: 'd1s0t5', text: 'vs: Abstract class (partial code, single inherit) vs Interface (pure contract, multiple inherit)', done: false, conf: 0 },
+          { id: 'd1s0t6', text: '⚠️ TRAP: Interfaces have NO instance variables, NO constructors — only constants + abstract methods', done: false, conf: 0 },
+          { id: 'd1s0t7', text: '★ EXAM: Constructor — called on "new". No return type. Can be overloaded for diff initializations', done: false, conf: 0 },
+          { id: 'd1s0t8', text: '★ EXAM: Destructor — C++ ~ClassName(). Java has no destructor (GC + close()/try-with-resources)', done: false, conf: 0 },
+          { id: 'd1s0t9', text: '★ EXAM: Exception — try (risky code) → catch (handle error) → finally (ALWAYS runs, cleanup)', done: false, conf: 0 },
+          { id: 'd1s0t10', text: '⚠️ TRAP: "finally" block executes even if try/catch contains "return" statement', done: false, conf: 0 },
+          { id: 'd1s0t11', text: '★ EXAM: GUI events — Button fires ActionListener → handler method executes on event thread', done: false, conf: 0 },
+          { id: 'd1s0t12', text: '★ EXAM: UML class diagram — top: ClassName, mid: -attributes, bottom: +methods(). +public -private', done: false, conf: 0 },
+          { id: 'd1s0t13', text: 'vs: Association (weak "uses") vs Composition (strong "owns" — part destroyed with whole)', done: false, conf: 0 },
+          { id: 'd1s0t14', text: '★ EXAM: Static members — belong to class not instance. Shared memory. Accessed via ClassName.member', done: false, conf: 0 },
+          { id: 'd1s0t15', text: 'Concrete class — implements ALL abstract methods. Can be instantiated with "new"', done: false, conf: 0 },
+          { id: 'd1s0t16', text: 'vs: Checked exceptions (must handle) vs Unchecked (RuntimeException, optional handling)', done: false, conf: 0 }
+        ]
+      },
+      {
+        name: 'Session 2 · Web Programming — HTTP & Frontend', topics: [
+          { id: 'd1s1t0', text: '★ EXAM: HTTP cycle — Client request → DNS resolve → TCP handshake → Server response', done: false, conf: 0 },
+          { id: 'd1s1t1', text: '★ EXAM: HTTP GET=read, POST=create, PUT=replace, PATCH=partial update, DELETE=remove', done: false, conf: 0 },
+          { id: 'd1s1t2', text: 'vs: GET (params in URL, cacheable, limited size) vs POST (body, not cached, unlimited)', done: false, conf: 0 },
+          { id: 'd1s1t3', text: '★ EXAM: Status 200=OK, 201=Created, 301=Redirect, 400=Bad Request, 401=Unauthorized, 404=Not Found, 500=Server Error', done: false, conf: 0 },
+          { id: 'd1s1t4', text: '★ EXAM: DOM — tree of HTML nodes. document.getElementById() returns element for JS manipulation', done: false, conf: 0 },
+          { id: 'd1s1t5', text: 'HTML semantic tags: header/nav/main/section/article/footer — describe meaning not appearance', done: false, conf: 0 },
+          { id: 'd1s1t6', text: '★ EXAM: CSS box model — content → padding → border → margin. box-sizing: border-box includes all', done: false, conf: 0 },
+          { id: 'd1s1t7', text: 'CSS specificity: inline(1000) > id(100) > class(10) > tag(1). !important overrides all', done: false, conf: 0 },
+          { id: 'd1s1t8', text: 'vs: AJAX (XHR, callbacks) vs Fetch API (modern, Promises, cleaner syntax)', done: false, conf: 0 },
+          { id: 'd1s1t9', text: '⚠️ TRAP: AJAX is a TECHNIQUE, not a language. Uses JavaScript + XMLHttpRequest', done: false, conf: 0 },
+          { id: 'd1s1t10', text: 'vs: Cookie (client, sent every request, 4KB) vs Session (server, needs session ID) vs localStorage (client, 5MB, never sent)', done: false, conf: 0 },
+          { id: 'd1s1t11', text: '⚠️ TRAP: localStorage is NEVER sent to server automatically, unlike cookies', done: false, conf: 0 },
+          { id: 'd1s1t12', text: '★ EXAM: Same-Origin Policy — browser blocks cross-origin requests. CORS headers allow exceptions', done: false, conf: 0 },
+          { id: 'd1s1t13', text: 'vs: REST (stateless, JSON, HTTP methods) vs SOAP (XML, WSDL contract, heavier)', done: false, conf: 0 },
+          { id: 'd1s1t14', text: '★ EXAM: SSL/TLS — asymmetric key exchange → symmetric session encryption. HTTPS = HTTP + TLS', done: false, conf: 0 },
+          { id: 'd1s1t15', text: '⚠️ TRAP: HTTPS encrypts transit only. Does NOT prevent XSS, CSRF, or SQL injection', done: false, conf: 0 },
+          { id: 'd1s1t16', text: '★ EXAM: MVC — Model(data/logic), View(UI), Controller(input handler). Separation of concerns', done: false, conf: 0 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 2, label: 'Jun 5', status: 'future', title: 'Databases + Mobile Dev',
+    sessions: [
+      {
+        name: 'Session 1 · Databases — SQL & Relational', topics: [
+          { id: 'd2s0t0', text: '★ EXAM: Primary Key — unique, NOT NULL. Foreign Key — references PK in another table', done: false, conf: 0 },
+          { id: 'd2s0t1', text: '★ EXAM: INNER JOIN — only matching rows in both tables returned', done: false, conf: 0 },
+          { id: 'd2s0t2', text: 'vs: LEFT JOIN (all left + matches) vs RIGHT JOIN (all right + matches) vs FULL (all rows)', done: false, conf: 0 },
+          { id: 'd2s0t3', text: '⚠️ TRAP: LEFT JOIN returns NULLs for non-matching right side — this is normal, not an error', done: false, conf: 0 },
+          { id: 'd2s0t4', text: '★ EXAM: SQL SELECT syntax: SELECT col FROM table WHERE cond GROUP BY col HAVING cond ORDER BY col', done: false, conf: 0 },
+          { id: 'd2s0t5', text: 'vs: WHERE filters ROWS before grouping. HAVING filters GROUPS after GROUP BY', done: false, conf: 0 },
+          { id: 'd2s0t6', text: '★ EXAM: Aggregates — COUNT(), SUM(), AVG(), MAX(), MIN(). Used with GROUP BY', done: false, conf: 0 },
+          { id: 'd2s0t7', text: 'vs: DDL (CREATE/ALTER/DROP — structure) vs DML (INSERT/UPDATE/DELETE/SELECT — data)', done: false, conf: 0 },
+          { id: 'd2s0t8', text: '★ EXAM: ACID — Atomicity(all/nothing), Consistency(rules), Isolation(concurrency), Durability(permanent)', done: false, conf: 0 },
+          { id: 'd2s0t9', text: '⚠️ TRAP: Isolation levels trade consistency for speed. Read Uncommitted → dirty reads', done: false, conf: 0 },
+          { id: 'd2s0t10', text: '★ EXAM: Transactions — BEGIN → operations → COMMIT(save) or ROLLBACK(undo all)', done: false, conf: 0 },
+          { id: 'd2s0t11', text: '★ EXAM: Index = B-tree for fast lookup. Speeds SELECT, slows INSERT/UPDATE/DELETE', done: false, conf: 0 },
+          { id: 'd2s0t12', text: 'vs: Clustered index (reorders rows, 1 per table) vs Non-clustered (pointer, multiple allowed)', done: false, conf: 0 },
+          { id: 'd2s0t13', text: '⚠️ TRAP: Composite index (A,B) helps queries on (A) or (A,B), NOT queries on (B) alone', done: false, conf: 0 },
+          { id: 'd2s0t14', text: 'vs: Stored Procedure (executes DML, no return required) vs Function (MUST return, no DML)', done: false, conf: 0 },
+          { id: 'd2s0t15', text: 'vs: MongoDB (NoSQL, document, flexible schema) vs MySQL (SQL, relational, fixed schema)', done: false, conf: 0 }
+        ]
+      },
+      {
+        name: 'Session 2 · Databases — Normalization & ER', topics: [
+          { id: 'd2s1t0', text: '★ EXAM: 1NF — atomic values (no lists in cells), unique rows, primary key exists', done: false, conf: 0 },
+          { id: 'd2s1t1', text: '★ EXAM: 2NF — 1NF + no partial dependency (non-key depends on FULL composite key)', done: false, conf: 0 },
+          { id: 'd2s1t2', text: '★ EXAM: 3NF — 2NF + no transitive dependency (non-key depends only on key, not other non-key)', done: false, conf: 0 },
+          { id: 'd2s1t3', text: '★ EXAM: BCNF — every determinant is a candidate key. Stricter than 3NF', done: false, conf: 0 },
+          { id: 'd2s1t4', text: '⚠️ TRAP: Denormalization intentionally adds redundancy for read speed at cost of write anomalies', done: false, conf: 0 },
+          { id: 'd2s1t5', text: '★ EXAM: ER diagram — Rectangle=entity, Ellipse=attribute, Diamond=relationship, Lines=connections', done: false, conf: 0 },
+          { id: 'd2s1t6', text: '★ EXAM: Cardinality — 1:1, 1:N, M:N. M:N must be decomposed via junction table', done: false, conf: 0 },
+          { id: 'd2s1t7', text: 'Weak entity — depends on strong entity. Has no PK of its own. Uses partial key + owner FK', done: false, conf: 0 },
+          { id: 'd2s1t8', text: '⚠️ TRAP: FK CAN be NULL (optional relationship) unless explicitly constrained NOT NULL', done: false, conf: 0 },
+          { id: 'd2s1t9', text: '★ EXAM: Referential integrity — FK must match existing PK or be NULL. CASCADE DELETE propagates', done: false, conf: 0 },
+          { id: 'd2s1t10', text: 'vs: ER diagram (conceptual design) vs Relational schema (implementation tables)', done: false, conf: 0 },
+          { id: 'd2s1t11', text: '★ EXAM: Normalization purpose — eliminate redundancy, prevent insert/update/delete anomalies', done: false, conf: 0 },
+          { id: 'd2s1t12', text: 'Subquery — SELECT inside SELECT. Correlated subquery references outer query row-by-row', done: false, conf: 0 },
+          { id: 'd2s1t13', text: 'Views — virtual table from saved query. Simplifies complex joins. Does not store data', done: false, conf: 0 },
+          { id: 'd2s1t14', text: '★ EXAM: SQL injection prevention — use parameterized queries / prepared statements, never concatenate', done: false, conf: 0 }
+        ]
+      },
+      {
+        name: 'Session 3 · Mobile Development', topics: [
+          { id: 'd2s2t0', text: '★ EXAM: Android lifecycle: onCreate→onStart→onResume→[running]→onPause→onStop→onDestroy', done: false, conf: 0 },
+          { id: 'd2s2t1', text: '⚠️ TRAP: Screen rotation destroys + recreates Activity. Save state via onSaveInstanceState()', done: false, conf: 0 },
+          { id: 'd2s2t2', text: '★ EXAM: 4 components — Activity(UI), Service(background), BroadcastReceiver(events), ContentProvider(data sharing)', done: false, conf: 0 },
+          { id: 'd2s2t3', text: 'vs: Explicit intent (names target component) vs Implicit intent (declares action, system resolves)', done: false, conf: 0 },
+          { id: 'd2s2t4', text: '★ EXAM: Normal permissions (auto-granted at install) vs Dangerous permissions (runtime user approval)', done: false, conf: 0 },
+          { id: 'd2s2t5', text: '★ EXAM: SQLite — embedded serverless DB. SQLiteOpenHelper manages creation/versioning', done: false, conf: 0 },
+          { id: 'd2s2t6', text: '★ EXAM: APK build: .java→.class→classes.dex→APK (zipped with resources + manifest)', done: false, conf: 0 },
+          { id: 'd2s2t7', text: '⚠️ TRAP: Service runs on MAIN thread by default. Use IntentService/WorkManager for long tasks', done: false, conf: 0 },
+          { id: 'd2s2t8', text: '★ EXAM: BroadcastReceiver — listens for system events (battery low, boot, network change)', done: false, conf: 0 },
+          { id: 'd2s2t9', text: '★ EXAM: ContentProvider — secure inter-app data sharing interface (query, insert, update, delete)', done: false, conf: 0 },
+          { id: 'd2s2t10', text: 'Mobile constraints — limited battery, memory, CPU, variable network. Code must be resource-efficient', done: false, conf: 0 },
+          { id: 'd2s2t11', text: '★ EXAM: ProGuard — shrinks, optimizes, obfuscates bytecode. Reduces APK size, deters reverse engineering', done: false, conf: 0 },
+          { id: 'd2s2t12', text: '⚠️ TRAP: Storing credentials in plaintext SharedPreferences = insecure. Use EncryptedSharedPreferences', done: false, conf: 0 },
+          { id: 'd2s2t13', text: 'vs: Fragment (reusable UI piece inside Activity) vs Activity (full screen window with own lifecycle)', done: false, conf: 0 },
+          { id: 'd2s2t14', text: '★ EXAM: AndroidManifest.xml declares components, permissions, min SDK, app entry point', done: false, conf: 0 },
+          { id: 'd2s2t15', text: 'RecyclerView — efficient scrolling list. Uses ViewHolder pattern to recycle off-screen views', done: false, conf: 0 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 3, label: 'Jun 6', status: 'future', title: 'Operating Systems + Networking',
+    sessions: [
+      {
+        name: 'Session 1 · OS — Processes & Scheduling', topics: [
+          { id: 'd3s0t0', text: '★ EXAM: 5 process states — New→Ready→Running→Waiting(blocked)→Terminated', done: false, conf: 0 },
+          { id: 'd3s0t1', text: '⚠️ TRAP: Process cannot go Waiting→Running directly. Must return to Ready queue first', done: false, conf: 0 },
+          { id: 'd3s0t2', text: '★ EXAM: PCB stores PID, state, PC, registers, memory maps. Saved/restored on context switch', done: false, conf: 0 },
+          { id: 'd3s0t3', text: 'vs: Process (own memory space, heavy) vs Thread (shared memory within process, light)', done: false, conf: 0 },
+          { id: 'd3s0t4', text: '★ EXAM: FCFS — First Come First Served. Non-preemptive. Convoy effect (short waits for long)', done: false, conf: 0 },
+          { id: 'd3s0t5', text: '★ EXAM: SJF — Shortest Job First. Optimal avg wait time. Can starve long processes', done: false, conf: 0 },
+          { id: 'd3s0t6', text: '⚠️ TRAP: SJF requires knowing burst time in advance — not always possible in practice', done: false, conf: 0 },
+          { id: 'd3s0t7', text: '★ EXAM: Round Robin — time quantum for each process cyclically. Fair. Prevents starvation', done: false, conf: 0 },
+          { id: 'd3s0t8', text: '⚠️ TRAP: RR quantum too large → degrades to FCFS. Too small → excessive context switch overhead', done: false, conf: 0 },
+          { id: 'd3s0t9', text: '★ EXAM: Priority scheduling — highest priority first. Aging = increase priority over time to prevent starvation', done: false, conf: 0 },
+          { id: 'd3s0t10', text: 'vs: Preemptive (can interrupt running process) vs Non-preemptive (waits until process finishes/blocks)', done: false, conf: 0 },
+          { id: 'd3s0t11', text: 'Multilevel Queue — separate queues for process types. Foreground (interactive) > Background (batch)', done: false, conf: 0 },
+          { id: 'd3s0t12', text: '★ EXAM: Context switch — save current PCB, load next PCB. Pure overhead (no useful work)', done: false, conf: 0 },
+          { id: 'd3s0t13', text: '★ EXAM: Turnaround time = completion - arrival. Waiting time = turnaround - burst', done: false, conf: 0 },
+          { id: 'd3s0t14', text: 'vs: Kernel mode (unrestricted hardware access) vs User mode (restricted, protected)', done: false, conf: 0 },
+          { id: 'd3s0t15', text: '★ EXAM: System call — user process requests kernel service. Switches user→kernel mode', done: false, conf: 0 }
+        ]
+      },
+      {
+        name: 'Session 2 · OS — Deadlock & Memory', topics: [
+          { id: 'd3s1t0', text: '★ EXAM: Deadlock 4 conditions (ALL must hold): Mutual Exclusion, Hold&Wait, No Preemption, Circular Wait', done: false, conf: 0 },
+          { id: 'd3s1t1', text: '★ EXAM: Deadlock prevention — eliminate one condition. Deadlock avoidance — Banker\'s algorithm', done: false, conf: 0 },
+          { id: 'd3s1t2', text: '★ EXAM: Banker\'s: check Need ≤ Available. Simulate allocation. If safe sequence exists → grant', done: false, conf: 0 },
+          { id: 'd3s1t3', text: 'Deadlock detection — allow it, detect via resource allocation graph, recover by killing process', done: false, conf: 0 },
+          { id: 'd3s1t4', text: 'vs: Internal fragmentation (wasted space inside partition) vs External (scattered free gaps)', done: false, conf: 0 },
+          { id: 'd3s1t5', text: '★ EXAM: Memory fit — First-Fit(first block), Best-Fit(tightest), Worst-Fit(largest leftover)', done: false, conf: 0 },
+          { id: 'd3s1t6', text: '★ EXAM: Paging — fixed-size frames. Page table maps logical→physical. No external fragmentation', done: false, conf: 0 },
+          { id: 'd3s1t7', text: '⚠️ TRAP: Paging eliminates EXTERNAL fragmentation but introduces INTERNAL fragmentation', done: false, conf: 0 },
+          { id: 'd3s1t8', text: 'vs: Paging (fixed blocks, physical) vs Segmentation (variable logical units — code/data/stack)', done: false, conf: 0 },
+          { id: 'd3s1t9', text: '★ EXAM: Virtual memory — disk as RAM extension. Process can exceed physical RAM size', done: false, conf: 0 },
+          { id: 'd3s1t10', text: '★ EXAM: Page fault — page not in RAM → OS loads from disk. Expensive I/O operation', done: false, conf: 0 },
+          { id: 'd3s1t11', text: '★ EXAM: Page replacement — FIFO(oldest out), LRU(least recent), Optimal(farthest future use)', done: false, conf: 0 },
+          { id: 'd3s1t12', text: '⚠️ TRAP: Belady\'s Anomaly — FIFO can get MORE faults with MORE frames. LRU is immune', done: false, conf: 0 },
+          { id: 'd3s1t13', text: '★ EXAM: Thrashing — excessive paging. CPU utilization drops. Working set model prevents it', done: false, conf: 0 },
+          { id: 'd3s1t14', text: 'vs: FAT32 (4GB max file, no security) vs NTFS (large files, journaling, encryption, ACLs)', done: false, conf: 0 },
+          { id: 'd3s1t15', text: 'Semaphore — integer sync variable. wait(P) decrements, signal(V) increments. Controls concurrency', done: false, conf: 0 }
+        ]
+      },
+      {
+        name: 'Session 3 · Networking — OSI & Protocols', topics: [
+          { id: 'd3s2t0', text: '★ EXAM: OSI 7 layers: Physical(bits) → DataLink(frames) → Network(packets) → Transport(segments) → Session → Presentation → Application', done: false, conf: 0 },
+          { id: 'd3s2t1', text: '★ EXAM: Devices — Hub/Repeater(L1), Switch/Bridge(L2), Router(L3). Each uses diff addresses', done: false, conf: 0 },
+          { id: 'd3s2t2', text: 'vs: TCP (reliable, ordered, connection handshake, flow control) vs UDP (fast, no guarantee, connectionless)', done: false, conf: 0 },
+          { id: 'd3s2t3', text: '★ EXAM: TCP 3-way handshake — SYN → SYN-ACK → ACK. Establishes connection before data', done: false, conf: 0 },
+          { id: 'd3s2t4', text: '★ EXAM: Subnetting — usable hosts = 2^H - 2 (subtract network + broadcast addresses)', done: false, conf: 0 },
+          { id: 'd3s2t5', text: '★ EXAM: CIDR /24 = 255.255.255.0 = 256 IPs, 254 usable. /25 = 128 IPs, 126 usable', done: false, conf: 0 },
+          { id: 'd3s2t6', text: '⚠️ TRAP: x.x.x.0 is network address, x.x.x.255 is broadcast. Neither can be assigned to hosts', done: false, conf: 0 },
+          { id: 'd3s2t7', text: 'vs: RIP (distance vector, max 15 hops) vs OSPF (link state, Dijkstra, fast convergence)', done: false, conf: 0 },
+          { id: 'd3s2t8', text: '★ EXAM: BGP — path vector protocol for inter-AS (inter-domain) routing on the Internet', done: false, conf: 0 },
+          { id: 'd3s2t9', text: '★ EXAM: NAT — maps private IPs (192.168.x.x) to public IP. Conserves IPv4 addresses', done: false, conf: 0 },
+          { id: 'd3s2t10', text: '★ EXAM: DNS resolution — Client→Recursive Resolver→Root→TLD(.com)→Authoritative→IP returned', done: false, conf: 0 },
+          { id: 'd3s2t11', text: '★ EXAM: DHCP — auto-assigns IP via DORA: Discover→Offer→Request→Acknowledge', done: false, conf: 0 },
+          { id: 'd3s2t12', text: 'vs: IPv4 (32-bit, 4.3B addresses, dotted decimal) vs IPv6 (128-bit, hex notation, enormous space)', done: false, conf: 0 },
+          { id: 'd3s2t13', text: '★ EXAM: MAC address — 48-bit physical NIC address. Used at Layer 2 for local frame delivery', done: false, conf: 0 },
+          { id: 'd3s2t14', text: '★ EXAM: Ports — HTTP(80), HTTPS(443), DNS(53), SSH(22), FTP(20/21), SMTP(25)', done: false, conf: 0 },
+          { id: 'd3s2t15', text: '⚠️ TRAP: Ping uses ICMP (Layer 3). ICMP does NOT use TCP or UDP ports', done: false, conf: 0 },
+          { id: 'd3s2t16', text: '★ EXAM: ARP — resolves known IP address to MAC address on local LAN segment', done: false, conf: 0 },
+          { id: 'd3s2t17', text: '★ EXAM: TCP flow control — sliding window mechanism prevents sender from overwhelming receiver', done: false, conf: 0 },
+          { id: 'd3s2t18', text: '⚠️ TRAP: SSL/TLS operates at Presentation layer (L6), NOT Application layer', done: false, conf: 0 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 4, label: 'Jun 7', status: 'future', title: 'Security + Software Engineering',
+    sessions: [
+      {
+        name: 'Session 1 · Information Security', topics: [
+          { id: 'd4s0t0', text: '★ EXAM: CIA Triad — Confidentiality(only authorized), Integrity(unaltered), Availability(accessible)', done: false, conf: 0 },
+          { id: 'd4s0t1', text: 'vs: Symmetric (same key, fast, AES) vs Asymmetric (public+private pair, slower, RSA)', done: false, conf: 0 },
+          { id: 'd4s0t2', text: '★ EXAM: AES = symmetric block cipher. RSA = asymmetric. AES for data, RSA for key exchange', done: false, conf: 0 },
+          { id: 'd4s0t3', text: '⚠️ TRAP: Hashing is ONE-WAY (SHA-256). Encryption is TWO-WAY (reversible with key)', done: false, conf: 0 },
+          { id: 'd4s0t4', text: '★ EXAM: Digital signature — sender encrypts hash with PRIVATE key. Verifier uses PUBLIC key', done: false, conf: 0 },
+          { id: 'd4s0t5', text: '⚠️ TRAP: Digital signature uses PRIVATE to sign (opposite of encryption public→encrypt)', done: false, conf: 0 },
+          { id: 'd4s0t6', text: '★ EXAM: PKI — Certificate Authority issues digital certificates binding identity to public key', done: false, conf: 0 },
+          { id: 'd4s0t7', text: '★ EXAM: SQL injection — malicious SQL in input. Fix: parameterized queries / prepared statements', done: false, conf: 0 },
+          { id: 'd4s0t8', text: '★ EXAM: XSS — inject JS into webpage. Stored XSS persists in DB. Reflected XSS in URL params', done: false, conf: 0 },
+          { id: 'd4s0t9', text: '★ EXAM: CSRF — tricks authenticated browser into unwanted request. Fix: CSRF tokens', done: false, conf: 0 },
+          { id: 'd4s0t10', text: 'Phishing — fake site/email steals credentials. Spear phishing = targeted at specific person', done: false, conf: 0 },
+          { id: 'd4s0t11', text: '★ EXAM: MITM — attacker intercepts between two parties. Mitigated by SSL/TLS encryption', done: false, conf: 0 },
+          { id: 'd4s0t12', text: '★ EXAM: Firewall types — Packet filter(headers), Stateful(connections), Application proxy(content)', done: false, conf: 0 },
+          { id: 'd4s0t13', text: 'vs: IDS (detects + alerts) vs IPS (detects + BLOCKS/prevents the traffic)', done: false, conf: 0 },
+          { id: 'd4s0t14', text: '⚠️ TRAP: Worm self-replicates without user action. Virus requires user to execute infected file', done: false, conf: 0 },
+          { id: 'd4s0t15', text: '★ EXAM: DDoS — botnet floods target. Exhausts availability. Mitigate with rate limiting/CDN', done: false, conf: 0 },
+          { id: 'd4s0t16', text: '★ EXAM: MFA — something you know(password) + have(token) + are(biometric). Min 2 factors', done: false, conf: 0 },
+          { id: 'd4s0t17', text: '★ EXAM: OWASP Top 10 #1: Broken Access Control. Users bypass authorization to reach unauthorized data', done: false, conf: 0 }
+        ]
+      },
+      {
+        name: 'Session 2 · Software Engineering — SDLC', topics: [
+          { id: 'd4s1t0', text: 'vs: Waterfall (sequential, rigid, fixed requirements) vs Agile (iterative sprints, flexible, customer feedback)', done: false, conf: 0 },
+          { id: 'd4s1t1', text: '★ EXAM: Spiral model — risk-driven. Repeated cycles: planning → risk analysis → engineering → evaluation', done: false, conf: 0 },
+          { id: 'd4s1t2', text: 'V-Model — each dev phase has corresponding test phase. Validation at each level', done: false, conf: 0 },
+          { id: 'd4s1t3', text: 'vs: Functional requirements (what system does — login, search) vs Non-functional (how — speed, security)', done: false, conf: 0 },
+          { id: 'd4s1t4', text: '★ EXAM: Use Case diagram — oval(use case), stick figure(actor), rectangle(system boundary)', done: false, conf: 0 },
+          { id: 'd4s1t5', text: '★ EXAM: Sequence diagram — lifelines(vertical), messages(horizontal arrows), time flows downward', done: false, conf: 0 },
+          { id: 'd4s1t6', text: 'vs: Use Case (actor goals/interactions) vs Activity (step-by-step workflow/process flow)', done: false, conf: 0 },
+          { id: 'd4s1t7', text: '★ EXAM: Class diagram — top:ClassName, mid:-attributes, bottom:+methods. Shows relationships', done: false, conf: 0 },
+          { id: 'd4s1t8', text: '★ EXAM: SOLID — S:Single Responsibility, O:Open-Closed, L:Liskov Substitution, I:Interface Segregation, D:Dependency Inversion', done: false, conf: 0 },
+          { id: 'd4s1t9', text: 'vs: Low coupling (modules independent — GOOD) vs High cohesion (module focused — GOOD)', done: false, conf: 0 },
+          { id: 'd4s1t10', text: '★ EXAM: Testing levels — Unit(function) → Integration(modules) → System(whole app) → UAT(user)', done: false, conf: 0 },
+          { id: 'd4s1t11', text: '⚠️ TRAP: Unit testing = DEVELOPERS. UAT = USERS/clients accepting the deliverable', done: false, conf: 0 },
+          { id: 'd4s1t12', text: 'vs: Black box (test without code knowledge) vs White box (test with full code visibility)', done: false, conf: 0 },
+          { id: 'd4s1t13', text: '★ EXAM: Refactoring — improve internal structure WITHOUT changing external behavior', done: false, conf: 0 },
+          { id: 'd4s1t14', text: '⚠️ TRAP: Verification = "building it RIGHT" (process). Validation = "building the RIGHT thing" (product)', done: false, conf: 0 },
+          { id: 'd4s1t15', text: 'Design patterns — Singleton(one instance), Factory(creation), Observer(subscription), MVC(separation)', done: false, conf: 0 },
+          { id: 'd4s1t16', text: 'TDD — Test-Driven Development. Write test FIRST, then code to pass it. Red→Green→Refactor', done: false, conf: 0 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 5, label: 'Jun 8', status: 'future', title: 'Project Management + AI + ML',
+    sessions: [
+      {
+        name: 'Session 1 · Project Management', topics: [
+          { id: 'd5s0t0', text: '★ EXAM: PM lifecycle — Initiating → Planning → Executing → Monitoring/Controlling → Closing', done: false, conf: 0 },
+          { id: 'd5s0t1', text: '★ EXAM: WBS — hierarchical decomposition: Project → Phases → Deliverables → Work Packages → Tasks', done: false, conf: 0 },
+          { id: 'd5s0t2', text: '★ EXAM: Critical Path — longest path through network. Zero float. Any delay → project delay', done: false, conf: 0 },
+          { id: 'd5s0t3', text: '★ EXAM: Float/Slack = Late Start − Early Start. Critical activities have float = 0', done: false, conf: 0 },
+          { id: 'd5s0t4', text: '★ EXAM: CPI = EV/AC. >1 = under budget, <1 = over budget. SPI = EV/PV. >1 = ahead', done: false, conf: 0 },
+          { id: 'd5s0t5', text: '★ EXAM: EAC = BAC/CPI — estimated total cost at completion based on current performance', done: false, conf: 0 },
+          { id: 'd5s0t6', text: '⚠️ TRAP: Critical path tasks have ZERO float. Adding resources to non-critical tasks doesn\'t help', done: false, conf: 0 },
+          { id: 'd5s0t7', text: '★ EXAM: Risk responses — Avoid(eliminate), Transfer(insurance), Mitigate(reduce), Accept(acknowledge)', done: false, conf: 0 },
+          { id: 'd5s0t8', text: '★ EXAM: Risk matrix — Probability × Impact = Risk Score. High score = priority treatment', done: false, conf: 0 },
+          { id: 'd5s0t9', text: '★ EXAM: Stakeholder matrix — Power vs Interest grid. High/High = Manage Closely', done: false, conf: 0 },
+          { id: 'd5s0t10', text: 'vs: Agile (iterative sprints, flexible scope) vs Waterfall (sequential, fixed requirements)', done: false, conf: 0 },
+          { id: 'd5s0t11', text: '★ EXAM: Scrum roles — Product Owner(priorities), Scrum Master(facilitator), Dev Team(builds)', done: false, conf: 0 },
+          { id: 'd5s0t12', text: '⚠️ TRAP: Scrum Master is NOT a project manager — facilitator only, no authority over team', done: false, conf: 0 },
+          { id: 'd5s0t13', text: '★ EXAM: Project Charter — formally authorizes project and grants PM authority', done: false, conf: 0 },
+          { id: 'd5s0t14', text: '★ EXAM: Triple Constraint — Scope, Time, Cost. Change one → affects the other two', done: false, conf: 0 },
+          { id: 'd5s0t15', text: '⚠️ TRAP: Gold plating = adding unrequested features. Wastes resources, increases risk. Bad practice', done: false, conf: 0 },
+          { id: 'd5s0t16', text: 'COCOMO — estimates effort in person-months from code size (KLOC). Basic/Intermediate/Detailed', done: false, conf: 0 }
+        ]
+      },
+      {
+        name: 'Session 2 · Artificial Intelligence', topics: [
+          { id: 'd5s1t0', text: '★ EXAM: State space — initial state + operators + goal test + path cost = search problem', done: false, conf: 0 },
+          { id: 'd5s1t1', text: '★ EXAM: BFS — level-by-level, queue. Complete, optimal for equal costs. O(b^d) time+space', done: false, conf: 0 },
+          { id: 'd5s1t2', text: '★ EXAM: DFS — depth-first, stack/recursion. NOT complete (infinite loops). O(bm) space', done: false, conf: 0 },
+          { id: 'd5s1t3', text: 'vs: BFS (finds shortest path, high memory) vs DFS (deep-first, low memory, may not terminate)', done: false, conf: 0 },
+          { id: 'd5s1t4', text: 'IDDFS — iterative deepening. BFS completeness + DFS memory efficiency. Best uninformed search', done: false, conf: 0 },
+          { id: 'd5s1t5', text: 'UCS — Uniform Cost Search. Expands lowest path cost first. Optimal but slow', done: false, conf: 0 },
+          { id: 'd5s1t6', text: '★ EXAM: A* search — f(n)=g(n)+h(n). Optimal if h(n) is admissible (never overestimates)', done: false, conf: 0 },
+          { id: 'd5s1t7', text: '⚠️ TRAP: Greedy Best-First uses only h(n). NOT optimal, NOT complete. A* IS optimal', done: false, conf: 0 },
+          { id: 'd5s1t8', text: '★ EXAM: Admissible heuristic — h(n) ≤ h*(n) where h* is true cost. Required for A* optimality', done: false, conf: 0 },
+          { id: 'd5s1t9', text: '★ EXAM: Bayes theorem — P(A|B) = P(B|A)×P(A)/P(B). Updates belief with evidence', done: false, conf: 0 },
+          { id: 'd5s1t10', text: '★ EXAM: Bayesian network — DAG of conditional dependencies. Nodes=variables, edges=influence', done: false, conf: 0 },
+          { id: 'd5s1t11', text: '★ EXAM: Propositional logic — AND(∧), OR(∨), NOT(¬), IMPLIES(→), IFF(↔)', done: false, conf: 0 },
+          { id: 'd5s1t12', text: '★ EXAM: Modus Ponens — if P→Q and P is true, then Q is true. Most basic inference rule', done: false, conf: 0 },
+          { id: 'd5s1t13', text: '⚠️ TRAP: P→Q is false ONLY when P=true and Q=false. All other combinations = true', done: false, conf: 0 },
+          { id: 'd5s1t14', text: 'Conditional independence — X⊥Y|Z means X and Y independent given Z. Key for Bayesian nets', done: false, conf: 0 }
+        ]
+      },
+      {
+        name: 'Session 3 · Machine Learning', topics: [
+          { id: 'd5s2t0', text: '★ EXAM: 3 ML types — Supervised(labeled→predict), Unsupervised(unlabeled→patterns), Reinforcement(agent+reward)', done: false, conf: 0 },
+          { id: 'd5s2t1', text: 'vs: Classification (discrete output — cat/dog) vs Regression (continuous — price prediction)', done: false, conf: 0 },
+          { id: 'd5s2t2', text: '★ EXAM: Linear regression — y=mx+b. Minimizes sum of squared errors. Continuous prediction', done: false, conf: 0 },
+          { id: 'd5s2t3', text: 'Logistic regression — classification via sigmoid function. Output = probability [0,1]', done: false, conf: 0 },
+          { id: 'd5s2t4', text: 'Decision tree — splits by feature values. Leaf=class label. Prone to overfitting', done: false, conf: 0 },
+          { id: 'd5s2t5', text: 'Random Forest — ensemble of decision trees. Majority vote. Reduces overfitting', done: false, conf: 0 },
+          { id: 'd5s2t6', text: 'KNN — classify by K nearest neighbors majority vote. Lazy learner. No training phase', done: false, conf: 0 },
+          { id: 'd5s2t7', text: '★ EXAM: Bias-variance tradeoff — high bias=underfitting, high variance=overfitting', done: false, conf: 0 },
+          { id: 'd5s2t8', text: '⚠️ TRAP: Overfitting = high training accuracy but low test accuracy. Model memorized data', done: false, conf: 0 },
+          { id: 'd5s2t9', text: 'vs: Train set(fit model) vs Validation set(tune hyperparams) vs Test set(final evaluation)', done: false, conf: 0 },
+          { id: 'd5s2t10', text: '★ EXAM: K-Fold CV — split into K parts, train on K-1, test on 1, rotate K times, average', done: false, conf: 0 },
+          { id: 'd5s2t11', text: '★ EXAM: Accuracy=(TP+TN)/all. Precision=TP/(TP+FP). Recall=TP/(TP+FN). F1=harmonic mean', done: false, conf: 0 },
+          { id: 'd5s2t12', text: '⚠️ TRAP: High accuracy misleading with imbalanced data (99% class A → 99% accuracy is trivial)', done: false, conf: 0 },
+          { id: 'd5s2t13', text: '★ EXAM: ROC curve — TPR vs FPR plot. AUC = area under curve. AUC=1.0 is perfect classifier', done: false, conf: 0 },
+          { id: 'd5s2t14', text: '★ EXAM: K-Means — assign K centroids, assign points to nearest, recalculate centroids, repeat', done: false, conf: 0 },
+          { id: 'd5s2t15', text: 'PCA — dimensionality reduction. Finds directions of maximum variance. Unsupervised', done: false, conf: 0 },
+          { id: 'd5s2t16', text: '★ EXAM: Neural net — input→hidden→output layers. Each node: z=wx+b, a=activation(z)', done: false, conf: 0 },
+          { id: 'd5s2t17', text: 'Activation functions — Sigmoid(0-1), ReLU(max(0,x) most common), Tanh(-1 to 1)', done: false, conf: 0 },
+          { id: 'd5s2t18', text: '★ EXAM: Gradient descent — w = w - α·∂J/∂w. α=learning rate. Minimizes loss iteratively', done: false, conf: 0 },
+          { id: 'd5s2t19', text: '⚠️ TRAP: Deep learning needs large data + compute. Not always better. Interpretability problem', done: false, conf: 0 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 6, label: 'Jun 9 — Exam Eve', status: 'review', title: 'Full review — weak spots only',
+    sessions: [
+      {
+        name: 'Morning · Red Dot Attack', topics: [
+          { id: 'd6s0t0', text: '★ EXAM: Revisit every RED-rated (conf=1) topic from Days 0-5. Close all knowledge gaps', done: false, conf: 0 },
+          { id: 'd6s0t1', text: '★ EXAM: Revisit every YELLOW-rated topic. Convert to green via active recall', done: false, conf: 0 },
+          { id: 'd6s0t2', text: '★ EXAM: Write one-line definition for each of the 13 courses from memory', done: false, conf: 0 },
+          { id: 'd6s0t3', text: 'Practice scenario questions — given situation, identify which concept applies', done: false, conf: 0 }
+        ]
+      },
+      {
+        name: 'Afternoon · Yellow Dot Consolidation', topics: [
+          { id: 'd6s1t0', text: 'Quick-fire self-quiz — cover topic text, recite definition from memory', done: false, conf: 0 },
+          { id: 'd6s1t1', text: 'Focus on formula topics — EVM, Big-O, subnetting, Bayes, gradient descent', done: false, conf: 0 },
+          { id: 'd6s1t2', text: 'Review all "⚠️ TRAP" topics — these are the most common wrong answers', done: false, conf: 0 },
+          { id: 'd6s1t3', text: 'Review all "vs:" comparison topics — exams love "what\'s the difference" questions', done: false, conf: 0 }
+        ]
+      },
+      {
+        name: 'Evening · Final Prep', topics: [
+          { id: 'd6s2t0', text: '★ EXAM: Re-read own notes only — zero new material after 8pm', done: false, conf: 0 },
+          { id: 'd6s2t1', text: '★ EXAM: Prepare exam ID, pens, calculator, registration documents tonight', done: false, conf: 0 },
+          { id: 'd6s2t2', text: '★ EXAM: Sleep 8 hours — memory consolidation happens during sleep. Non-negotiable', done: false, conf: 0 },
+          { id: 'd6s2t3', text: 'Light meal tonight + good breakfast tomorrow. Brain needs glucose for performance', done: false, conf: 0 },
+          { id: 'd6s2t4', text: '★ EXAM: Arrive 20 min early. Read ALL questions before answering. Spot easy ones first', done: false, conf: 0 },
+          { id: 'd6s2t5', text: '★ EXAM: For MCQ: eliminate obviously wrong answers first. If stuck, mark and move on', done: false, conf: 0 },
+          { id: 'd6s2t6', text: 'Time management — allocate minutes per question. Don\'t spend 10min on one question', done: false, conf: 0 }
+        ]
+      }
+    ]
+  }
+];
